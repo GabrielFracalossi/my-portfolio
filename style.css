@@ -312,7 +312,6 @@ section { position: relative; z-index: 2; }
 .section-wrap {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 5vw;
 }
 
 .section-header {
