@@ -76,7 +76,9 @@
           <div class="about-avatar-wrap">
             <div class="avatar-ring"></div>
             <div class="avatar-ring-2"></div>
-            <div class="avatar-placeholder">👨‍💻</div>
+            <div class="avatar-placeholder">
+              <img src="profile.png" alt="Gabriel Fracalossi" class="avatar-img" />
+            </div>
           </div>
           <div class="about-stats">
             <div class="stat-card">
@@ -131,19 +133,12 @@
         <p class="section-desc">Uma seleção dos principais projetos em que atuei do backend ao produto final.</p>
       </div>
 
-      <div class="projects-filter">
-        <button class="filter-btn active" data-filter="all">Todos</button>
-        <button class="filter-btn" data-filter="backend">Backend</button>
-        <button class="filter-btn" data-filter="frontend">Frontend</button>
-        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-      </div>
-
       <div class="projects-grid" id="projectsGrid">
 
         <!-- PROJECT CARD EXAMPLE 1 -->
-        <div class="project-card" data-category="backend" data-reveal>
+        <div class="project-card" data-reveal>
           <div class="project-thumb">
-            <div class="project-thumb-placeholder">📊</div>
+            <div class="project-thumb-placeholder">⚡<span class="thumb-label">powerembedded.com.br</span></div>
             <div class="project-thumb-overlay"></div>
             <div class="project-tags-top">
               <span class="tag-pill tag-backend">Backend</span>
@@ -173,9 +168,9 @@
         </div>
 
         <!-- PROJECT CARD EXAMPLE 2 -->
-        <div class="project-card" data-category="fullstack" data-reveal>
+        <div class="project-card" data-reveal>
           <div class="project-thumb">
-            <div class="project-thumb-placeholder">🌐</div>
+            <div class="project-thumb-placeholder">💍<span class="thumb-label">estaocasando.com</span></div>
             <div class="project-thumb-overlay"></div>
             <div class="project-tags-top">
               <span class="tag-pill tag-fullstack">Full Stack</span>
@@ -207,9 +202,9 @@
         </div>
 
         <!-- PROJECT CARD EXAMPLE 3 -->
-        <div class="project-card" data-category="frontend" data-reveal>
+        <div class="project-card" data-reveal>
           <div class="project-thumb">
-            <div class="project-thumb-placeholder">🌐</div>
+            <div class="project-thumb-placeholder">🏢<span class="thumb-label">sistemasneo.com.br</span></div>
             <div class="project-thumb-overlay"></div>
             <div class="project-tags-top">
               <span class="tag-pill tag-frontend">Frontend</span>
@@ -235,9 +230,9 @@
         </div>
 
         <!-- PROJECT CARD EXAMPLE 4 -->
-        <div class="project-card" data-category="frontend" data-reveal>
+        <div class="project-card" data-reveal>
           <div class="project-thumb">
-            <div class="project-thumb-placeholder">🌐</div>
+            <div class="project-thumb-placeholder">❄️<span class="thumb-label">tecnocryo.com.br</span></div>
             <div class="project-thumb-overlay"></div>
             <div class="project-tags-top">
               <span class="tag-pill tag-frontend">Frontend</span>
@@ -264,9 +259,9 @@
         </div>
 
         <!-- PROJECT CARD EXAMPLE 5 -->
-        <div class="project-card" data-category="backend" data-reveal>
+        <div class="project-card" data-reveal>
           <div class="project-thumb">
-            <div class="project-thumb-placeholder">📊</div>
+            <div class="project-thumb-placeholder">💰<span class="thumb-label">sistema financeiro</span></div>
             <div class="project-thumb-overlay"></div>
             <div class="project-tags-top">
               <span class="tag-pill tag-backend">Backend</span>
@@ -294,9 +289,9 @@
         </div>
 
         <!-- PROJECT CARD EXAMPLE 6 -->
-        <div class="project-card" data-category="backend" data-reveal>
+        <div class="project-card" data-reveal>
           <div class="project-thumb">
-            <div class="project-thumb-placeholder">📊</div>
+            <div class="project-thumb-placeholder">🔧<span class="thumb-label">github / artigo técnico</span></div>
             <div class="project-thumb-overlay"></div>
             <div class="project-tags-top">
               <span class="tag-pill tag-backend">Backend</span>
@@ -324,9 +319,9 @@
         </div>
 
         <!-- PROJECT CARD EXAMPLE 7 -->
-        <div class="project-card" data-category="fullstack" data-reveal>
+        <div class="project-card" data-reveal>
           <div class="project-thumb">
-            <div class="project-thumb-placeholder">🌐</div>
+            <div class="project-thumb-placeholder">🎓<span class="thumb-label">projetos acadêmicos</span></div>
             <div class="project-thumb-overlay"></div>
             <div class="project-tags-top">
               <span class="tag-pill tag-fullstack">Full Stack</span>
@@ -337,10 +332,10 @@
             <h3 class="project-name">Projetos Acadêmicos</h3>
             <p class="project-desc">Projetos desenvolvidos durante a graduação com foco em aprendizado prático de desenvolvimento web e mobile. Incluem aplicações com Node.js, frontend web e experimentos com desenvolvimento mobile.</p>
             <div class="project-tech">
-              <span class="tech-tag">FitUp App - app fitness</span>
-              <span class="tech-tag">Amicão - app de adoção de pets</span>
-              <span class="tech-tag">Blog de Gastronomia - site de conteúdo</span>
-              <span class="tech-tag">OrderManagement - API de estoque</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">HTML/CSS/JS</span>
+              <span class="tech-tag">APIs REST</span>
             </div>
             <div class="project-footer">
               <a href="https://github.com/GabrielFracalossi" target="_blank" class="project-link">
@@ -379,14 +374,14 @@
             <span class="stack-item">Entity Framework</span>
           </div>
         </div>
-        <div class="stack-card" data-reveal style="transition-delay:0.1s">
-          <div class="stack-icon">☁️</div>
-          <div class="stack-cat">Cloud & DevOps</div>
-          <div class="stack-name">Azure</div>
+        <div class="stack-card" data-reveal style="transition-delay:0.3s">
+          <div class="stack-icon">🌐</div>
+          <div class="stack-cat">Frontend</div>
+          <div class="stack-name">Web & Mobile</div>
           <div class="stack-items">
-            <span class="stack-item">Azure DevOps</span>
-            <span class="stack-item">App Service</span>
-            <span class="stack-item">Blob Storage</span>
+            <span class="stack-item">HTML/CSS/JS</span>
+            <span class="stack-item">Flutter</span>
+            <span class="stack-item">Vue.js</span>
           </div>
         </div>
         <div class="stack-card" data-reveal style="transition-delay:0.2s">
@@ -397,16 +392,6 @@
             <span class="stack-item">SQL Server</span>
             <span class="stack-item">PostgreSQL</span>
             <span class="stack-item">DBeaver</span>
-          </div>
-        </div>
-        <div class="stack-card" data-reveal style="transition-delay:0.3s">
-          <div class="stack-icon">🌐</div>
-          <div class="stack-cat">Frontend</div>
-          <div class="stack-name">Web & Mobile</div>
-          <div class="stack-items">
-            <span class="stack-item">HTML/CSS/JS</span>
-            <span class="stack-item">Flutter</span>
-            <span class="stack-item">Vue.js</span>
           </div>
         </div>
         <div class="stack-card" data-reveal style="transition-delay:0.3s">
