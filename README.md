@@ -27,4 +27,5 @@ Site de portfólio pessoal desenvolvido com HTML, CSS e JavaScript puro.
 
 ## Preview
 
-![Preview do portfólio](preview.png)
+![Preview desktop](preview-desktop.png)
+![Preview mobile](preview-mobile.png)
