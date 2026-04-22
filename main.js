@@ -20,6 +20,19 @@ navLinks.querySelectorAll('a').forEach(link => {
     hamburger.classList.remove('open');
   });
 });
+
+// Fecha o menu ao clicar fora
+document.addEventListener('click', (event) => {
+  if (!navLinks.classList.contains('open')) return;
+
+  const isClickInsideMenu = navLinks.contains(event.target);
+  const isClickHamburger = hamburger.contains(event.target);
+
+  if (!isClickInsideMenu && !isClickHamburger) {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('open');
+  }
+});
  
 // ── Scroll reveal
 const revealEls = document.querySelectorAll('[data-reveal]');

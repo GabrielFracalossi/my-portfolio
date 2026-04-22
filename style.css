@@ -80,12 +80,10 @@ nav {
   background: rgba(3,6,15,0);
   backdrop-filter: blur(0px);
   transition: background 0.4s ease, backdrop-filter 0.4s ease, border-bottom 0.4s ease;
-  border-bottom: 1px solid transparent;
 }
 nav.scrolled {
-  background: rgba(3,6,15,0.85);
+  background: rgba(3,6,15,0.96);
   backdrop-filter: blur(20px) saturate(1.5);
-  border-bottom: 1px solid var(--c-border);
 }
 
 .nav-logo {
@@ -895,11 +893,12 @@ footer {
     gap: 0;
     position: absolute;
     top: var(--nav-h);
-    left: 0; right: 0;
+    left: 33%; right: 0;
+    height: 100vh;
     background: rgba(3,6,15,0.96);
     backdrop-filter: blur(20px) saturate(1.5);
     border-bottom: 1px solid var(--c-border);
-    padding: 1rem 0 1.5rem;
+    padding: 1rem 1rem 1.5rem;
     animation: fadeDown 0.25s ease;
   }
   .nav-links.open li { width: 100%; }
@@ -919,10 +918,15 @@ footer {
     to   { opacity: 1; transform: translateY(0); }
   }
 
+  #hero { padding: calc(var(--nav-h)) 5vw 6rem; }
+  #about { padding: 5rem 5vw; }
+  #projects, #stack, #contact { padding: 4rem 5vw; }
+
   .about-grid { grid-template-columns: 1fr; gap: 3rem; }
   .about-visual { transform: none !important; }
   .about-content { transform: none !important; }
   .about-avatar-wrap { width: 220px; height: 220px; }
+  .avatar-img { height: inherit;}
 
   .projects-grid { grid-template-columns: 1fr; }
 
