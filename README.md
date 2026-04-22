@@ -21,7 +21,7 @@ Site de portfólio pessoal desenvolvido com HTML, CSS e JavaScript puro.
 
 - **Hero** — apresentação com badge animado e chamadas para ação
 - **Sobre** — bio, stats e stack de tecnologias
-- **Projetos** — cards com filtro por categoria (Backend, Frontend, Full Stack)
+- **Projetos** — cards por categoria (Backend, Frontend, Full Stack)
 - **Stack** — tecnologias organizadas por área
 - **Contato** — links para LinkedIn, GitHub e WhatsApp
 

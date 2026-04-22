@@ -169,31 +169,6 @@ nav.scrolled {
 
 .hero-inner { max-width: 860px; }
 
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.375rem 1rem;
-  border-radius: 50px;
-  border: 1px solid rgba(0,228,245,0.25);
-  background: rgba(0,228,245,0.05);
-  font-size: 0.8125rem;
-  color: var(--c-cyan);
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.6s ease forwards 0.2s;
-}
-.hero-badge .dot {
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--c-cyan);
-  animation: pulse 2s ease infinite;
-}
-
 @keyframes pulse {
   0%, 100% { opacity: 1; transform: scale(1); }
   50%       { opacity: 0.5; transform: scale(0.8); }
@@ -352,7 +327,7 @@ section { position: relative; z-index: 2; }
 }
 
 /* ─── ABOUT ─────────────────────────────────── */
-#about { padding: 7rem 0; }
+#about { padding: 7rem 5vw; }
 
 .about-grid {
   display: grid;
@@ -486,7 +461,7 @@ section { position: relative; z-index: 2; }
 .chip:hover { border-color: rgba(0,228,245,0.4); background: rgba(0,228,245,0.08); color: var(--c-cyan); }
 
 /* ─── PROJECTS ──────────────────────────────── */
-#projects { padding: 7rem 0; }
+#projects { padding: 7rem 5vw; }
 
 .projects-grid {
   display: grid;
@@ -698,7 +673,7 @@ section { position: relative; z-index: 2; }
 }
 
 /* ─── STACK ─────────────────────────────────── */
-#stack { padding: 7rem 0; }
+#stack { padding: 7rem 5vw; }
 
 .stack-grid {
   display: grid;
@@ -792,7 +767,7 @@ section { position: relative; z-index: 2; }
 }
 
 /* ─── CONTACT ───────────────────────────────── */
-#contact { padding: 7rem 0 5rem; }
+#contact { padding: 7rem 5vw 5rem; }
 
 .contact-card {
   max-width: 720px;
@@ -952,6 +927,7 @@ footer {
   .projects-grid { grid-template-columns: 1fr; }
 
   .contact-card { padding: 2rem 1.5rem; }
+  .contact-email { font-size: 0.875rem; }
 
   footer { flex-direction: column; text-align: center; }
 }
