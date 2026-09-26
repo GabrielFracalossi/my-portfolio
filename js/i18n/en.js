@@ -1,0 +1,169 @@
+/* English */
+window.I18N = window.I18N || {};
+window.I18N.en = {
+  'meta.title': 'Gabriel Fracalossi · .NET Developer',
+  'meta.description':
+    'Portfolio of Gabriel Fracalossi, .NET backend developer (C#, ASP.NET Core, Azure) and co-founder of Nazario Sistemas. APIs, integrations and in-house products.',
+
+  'a11y.skip': 'Skip to content',
+  'a11y.brand': 'Gabriel Fracalossi, home',
+  'a11y.mainNav': 'Main navigation',
+  'a11y.menuOpen': 'Open menu',
+  'a11y.menuClose': 'Close menu',
+  'a11y.lang': 'Language',
+  'a11y.langPt': 'PT, Português',
+  'a11y.langEn': 'EN, English',
+  'a11y.langEs': 'ES, Español',
+  'a11y.themeToLight': 'Switch to light theme',
+  'a11y.themeToDark': 'Switch to dark theme',
+  'a11y.portrait': 'Portrait of Gabriel Fracalossi',
+  'a11y.newTab': '(opens in a new tab)',
+
+  'nav.about': 'About',
+  'nav.experience': 'Experience',
+  'nav.projects': 'Projects',
+  'nav.stack': 'Stack',
+  'nav.contact': 'Contact',
+
+  'hero.hello': "Hi, I'm Gabriel.",
+  'hero.title': '.NET backend, APIs and Azure integrations',
+  'hero.lead':
+    'Developer with 2 years of C# and .NET, co-founder of Nazario Sistemas and open to remote opportunities in any time zone.',
+  'hero.ctaPrimary': 'Get in touch',
+  'hero.ctaSecondary': 'View projects',
+  'hero.status': 'Open to remote, international roles',
+  'hero.stat1.value': '2',
+  'hero.stat1.label': 'years of experience with C# and .NET',
+  'hero.stat2.value': '2 min → 15 s',
+  'hero.stat2.label': 'critical calls after the refactor',
+
+  'about.title': 'About me',
+  'about.statement':
+    'I turn business rules into fast, secure APIs that are easy to evolve, without losing sight of the product that lives beyond the code.',
+  'about.p1':
+    'I started as an intern and reached mid-level in two years, working with C#, ASP.NET Core and Azure. My focus is backend: layered architecture, service integrations and performance, always keeping the code simple to maintain.',
+  'about.p2':
+    "I'm also a co-founder of Nazario Sistemas, where I build the company's own products alongside my brother. That gave me a product and business perspective, from technical definition to the first contract. When needed, I move across frontend and mobile with JavaScript, Vue.js and Flutter.",
+  'about.chip.layered': 'Layered architecture',
+  'about.chip.integrations': 'API integration',
+
+  'exp.title': 'Experience',
+  'exp.lead':
+    'Two years of growth in backend, a software company in the making, and a business background that shapes how I see the product.',
+  'exp.azure.date': 'Sep 2024 – Aug 2026',
+  'exp.azure.role': 'Software Developer',
+  'exp.azure.path': 'Intern → Junior → Mid-level',
+  'exp.azure.b1':
+    'Full backend refactor of the PowerEmbedded product with the tech lead, during the .NET 8 to .NET 10 migration. The project moved to a layered architecture: critical calls dropped from ~2 minutes to ~15 seconds and deploys from 15 to 9 minutes.',
+  'exp.azure.b2':
+    'Dozens of features and fixes delivered across agile sprints, averaging 2 tickets a day from kickoff to QA handoff.',
+  'exp.nz.date': 'Jun 2025 – Present',
+  'exp.nz.role': 'Co-founder',
+  'exp.nz.b1':
+    "Building the company's own products in partnership with my brother, who has almost 20 years of experience in software.",
+  'exp.nz.b2': "Led the company's first commercial contract, including the final legal steps with the client.",
+  'exp.nz.b3':
+    'Since August 2026, building out the sales and marketing side: industry events (MLS Festival) and client prospecting.',
+  'exp.vsn.date': 'Mar 2019 – Present',
+  'exp.vsn.role': 'Administrative Manager',
+  'exp.vsn.company': 'VSN Indústria e Comércio de Móveis',
+  'exp.vsn.b1':
+    'Invoice issuance and quote preparation for school maintenance services, using technical reference tables (DER, SISCAN).',
+  'exp.b3.date': 'Feb 2021 – Mar 2023',
+  'exp.b3.role': 'Financial Market Analysis',
+  'exp.b3.company': 'Self-employed · Brazilian Stock Exchange (B3)',
+  'exp.b3.b1':
+    'Trading on the B3 based on technical and macroeconomic analysis and risk management. This is where I sharpened my analytical reasoning under high-volatility conditions.',
+  'exp.ja.date': 'Jan 2020 – Feb 2021',
+  'exp.ja.role': 'Marketing Assistant (Youth Apprentice)',
+  'exp.ja.company': 'Perfil Alumínio do Brasil',
+  'exp.ja.b1': 'Supported the marketing team with data organization, inventory control and spreadsheets for meetings.',
+  'exp.edu.label': 'Education',
+  'exp.edu.text': 'Associate Degree in Systems Analysis and Development · Universidade Vila Velha (completed)',
+
+  'nz.title': 'Beyond code, a software company',
+  'nz.lead':
+    "I've been a co-founder of Nazario Sistemas since June 2025. My brother, who has been building software for almost 20 years, and I create our own products.",
+  'nz.f1.title': 'In-house products',
+  'nz.f1.text': 'Software built from scratch, from the database to the interface. Vergi is the newest.',
+  'nz.f2.title': 'First contract',
+  'nz.f2.text': "I led the company's first commercial contract, through the final legal steps.",
+  'nz.f3.title': 'Sales and marketing',
+  'nz.f3.text':
+    'Since August 2026, I have been building the sales and marketing side, attending industry events and prospecting clients.',
+  'nz.cta': 'Meet Nazario Sistemas',
+  'nz.ctaProject': 'See Vergi',
+
+  'projects.title': 'Projects',
+  'projects.lead':
+    'Products and systems I built or helped build, from backend to interface. Newest first.',
+  'projects.visit': 'View project',
+  'projects.github': 'View on GitHub',
+
+  'tag.fullstack': 'Full Stack',
+  'tag.backend': 'Backend',
+  'tag.frontend': 'Frontend',
+  'tag.solo': 'Solo project',
+  'tag.integrations': 'Integrations',
+  'tag.product': 'In-house product',
+  'tag.powerbi': 'Power BI',
+  'tag.didactic': 'Educational',
+  'tag.academic': 'Academic',
+
+  'projects.vergi.role': 'In-house product · Nazario Sistemas',
+  'projects.vergi.desc':
+    'White-label online scheduling SaaS, built from scratch with my partner at Nazario Sistemas. Each business gets a public page with its own branding, and customers find open slots and book in a few taps. Includes a management dashboard, Stripe subscriptions, e-mail and push reminders, and an interface in three languages.',
+  'projects.cozinha.role': 'Full Stack Developer',
+  'projects.cozinha.desc':
+    'Mobile app that generates practical recipes with AI, with ingredient tracking, history and favorites, and payments integrated with Asaas. Built from scratch: backend, app, data modeling and architecture.',
+  'projects.estaocasando.role': 'Full Stack Developer · Solo project',
+  'projects.estaocasando.desc':
+    'Platform for creating custom wedding websites, with gift registry, guest management, vendor profiles, testimonials and messaging between users. Payments through StarkBank. A solo project, from backend to frontend.',
+  'projects.nazario.role': 'Frontend Developer and backend support',
+  'projects.nazario.desc':
+    "The company's corporate website, with a modern, responsive layout focused on user experience. I also built backend endpoints for demo requests and lead capture.",
+  'projects.powerembedded.role': 'Backend Developer · AzureBrasil.cloud',
+  'projects.powerembedded.desc':
+    'Production .NET backend: bug fixes, new features and automations with Azure Functions. I took part in the full refactor to a layered architecture during the .NET 10 migration, cutting critical calls from ~2 minutes to ~15 seconds and deploys from 15 to 9 minutes.',
+  'projects.tecnocryo.role': 'Frontend Developer and backend support',
+  'projects.tecnocryo.desc':
+    'Corporate website for a client, focused on presenting services, performance and responsiveness, integrated with the backend for contact and request capture.',
+  'projects.financeiro.role': 'Backend Developer with Full Stack work',
+  'projects.financeiro.desc':
+    'Complete financial system with management, contracts, automations and external integrations: StarkBank, e-mail delivery, push notifications and AI features. Complex business rules and process automation.',
+  'projects.minhaprimeiraapi.role': 'Backend Developer · Solo project',
+  'projects.minhaprimeiraapi.desc':
+    'Educational project used in technical articles, showing how to build and evolve an API with good practices: project structure, code organization and endpoint design.',
+  'projects.academicos.role': 'Full Stack Developer',
+  'projects.academicos.desc':
+    'University projects to practice web and mobile development, with Node.js applications, web frontends and Flutter experiments.',
+
+  'stack.title': 'Stack',
+  'stack.lead': 'The technologies, practices and tools I use day to day.',
+  'stack.lang': 'Languages and frameworks',
+  'stack.data': 'Data and integrations',
+  'stack.cloud': 'Cloud and version control',
+  'stack.arch': 'Architecture and best practices',
+  'stack.method': 'Methodologies',
+  'stack.ai': 'Applied AI',
+  'stack.langs': 'Languages',
+  'stack.item.apiIntegration': 'API integration',
+  'stack.item.layered': 'Layered architecture',
+  'stack.item.oop': 'Object-oriented programming',
+  'stack.item.refactor': 'Refactoring',
+  'stack.item.perf': 'Performance optimization',
+  'stack.item.migration': 'Version migration (.NET 8 → .NET 10)',
+  'stack.item.agents': 'Agents',
+  'stack.item.pt': 'Portuguese (native)',
+  'stack.item.en': 'English (intermediate)',
+  'stack.item.es': 'Spanish (intermediate)',
+
+  'contact.title': "Let's talk.",
+  'contact.lead':
+    "I'm open to remote .NET backend opportunities and to conversations about projects with Nazario Sistemas. Reach out through whichever channel you prefer.",
+  'contact.where': 'Vila Velha, Brazil (GMT-3) · Flexible availability across all time zones',
+  'contact.whatsappMsg': 'Hi! I found your portfolio and would like to talk.',
+
+  'footer.rights': '© 2026 Gabriel Fracalossi',
+  'footer.top': 'Back to top'
+};
