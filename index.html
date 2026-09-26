@@ -1,481 +1,509 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gabriel Fracalossi</title>
+  <title>Gabriel Fracalossi · Desenvolvedor Full Stack .NET</title>
+  <meta name="description" content="Desenvolvedor full stack com foco em backend .NET e sócio-fundador da Nazario Sistemas. Do planejamento ao deploy: APIs, integrações e aplicativos completos." />
+  <meta name="author" content="Gabriel Fracalossi" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://gabrielfracalossi.com.br/" />
+  <meta name="theme-color" content="#03060f" />
+
+  <!-- Open Graph: link preview on WhatsApp, LinkedIn and Instagram -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Gabriel Fracalossi" />
+  <meta property="og:url" content="https://gabrielfracalossi.com.br/" />
+  <meta property="og:title" content="Gabriel Fracalossi · Desenvolvedor Full Stack .NET" />
+  <meta property="og:description" content="Desenvolvedor full stack com foco em backend .NET e sócio-fundador da Nazario Sistemas. Do planejamento ao deploy: APIs, integrações e aplicativos completos." />
+  <meta property="og:image" content="https://gabrielfracalossi.com.br/assets/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Gabriel Fracalossi, desenvolvedor full stack .NET" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="es_ES" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Gabriel Fracalossi Nazario",
+  "alternateName": "Gabriel Fracalossi",
+  "url": "https://gabrielfracalossi.com.br/",
+  "image": "https://gabrielfracalossi.com.br/assets/img/gabriel.png",
+  "jobTitle": "Full Stack Developer (.NET)",
+  "description": "Desenvolvedor full stack com foco em backend .NET e sócio-fundador da Nazario Sistemas. Do planejamento ao deploy: APIs, integrações e aplicativos completos.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Vila Velha",
+    "addressRegion": "ES",
+    "addressCountry": "BR"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Nazario Sistemas",
+    "url": "https://www.jnazario.com/"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Universidade Vila Velha"
+  },
+  "knowsAbout": [
+    "C#",
+    ".NET",
+    "ASP.NET Core",
+    "Azure",
+    "Entity Framework",
+    "PostgreSQL",
+    "Flutter",
+    "Vue.js",
+    "JavaScript",
+    "REST APIs"
+  ],
+  "knowsLanguage": [
+    "pt-BR",
+    "en",
+    "es"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/gabrielfnazario/",
+    "https://github.com/GabrielFracalossi",
+    "https://www.instagram.com/gabrielf_nazario/"
+  ]
+}
+  </script>
+
+  <link rel="icon" href="assets/favicon.ico" sizes="16x16 32x32 48x48" />
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+
+  <!-- Applies saved theme before first paint (dark is the default) -->
+  <script>
+    (function () {
+      var r = document.documentElement;
+      r.classList.add('js');
+      try {
+        var t = localStorage.getItem('gf-theme');
+        if (t === 'light' || t === 'dark') r.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..800&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/img/gabriel.png" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <style>
+    /* Hides the un-translated markup for the few ms before i18n runs; fails open after 2s */
+    .js:not(.i18n-ready) body { opacity: 0; animation: gf-show 0.01s 2s forwards; }
+    @keyframes gf-show { to { opacity: 1; } }
+  </style>
 </head>
 <body>
+  <!--
+    THESIS: The portfolio is staged like the pinned Dribbble reference: a ghost word behind an arched, cut-out portrait, proof stated as numbers; it refuses the dark-hero, gradient-text, icon-card developer template.
+    OWN-WORLD: One rounded "stage" panel per big moment (hero, Nazario). Navy field and electric blue arch in dark; cool gray field and cobalt arch in light. Hanken Grotesk type, tight tracking. Black/white pill buttons with an attached circle arrow, white floating pills, glass stat cards, hairline rows instead of cards for text.
+    STORY: Recruiters and partners see a .NET backend developer and founder, believe it through real numbers and shipped products (Vergi first), then write via e-mail, LinkedIn or WhatsApp.
+    FIRST VIEWPORT: Desktop: ghost word BACKEND across the stage top, centered arch portrait (30vw) bottom-anchored, title + lead + pill CTA bottom-left, availability chip and two stat cards bottom-right. Mobile: arch first, copy below, stats stacked.
+    FORM: Pinned by the user (Dribbble reference); no roll; seed key: none.
+    FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+  -->
 
-  <!-- Background Blobs -->
-  <div class="blob blob-1"></div>
-  <div class="blob blob-2"></div>
-  <div class="blob blob-3"></div>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip"></a>
+
+  <!-- Icon sprite (one stroke weight for UI icons; filled brand marks) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></symbol>
+    <symbol id="i-arches" viewBox="0 0 400 500"><path d="M20 500V220a180 180 0 0 1 360 0v280"/><path d="M70 500V220a130 130 0 0 1 260 0v280"/><path d="M120 500V220a80 80 0 0 1 160 0v280"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="1.6"/><path d="m21 16-5-5-9 9"/></symbol>
+    <symbol id="i-p-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4M9 15.2l2.2 2.2 4-4.4"/></symbol>
+    <symbol id="i-p-plate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5.2"/><circle cx="12" cy="12" r="2.6"/><path d="M3.6 3.5v4.2a1.6 1.6 0 0 0 3.2 0V3.5M5.2 3.5v17M20.4 3.5c-1.8 1.2-2.6 3.6-2.6 6.6h2.6M20.4 3.5v17"/></symbol>
+    <symbol id="i-p-ring" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="5.2"/><path d="M6.4 7.2a7.2 7.2 0 0 1 3-1.8"/></symbol>
+    <symbol id="i-p-dollar" viewBox="0 0 24 24"><path d="M12 3v18M16.6 7.4c-.7-1.5-2.4-2.4-4.6-2.4-2.7 0-4.6 1.4-4.6 3.4 0 4.6 9.2 2.2 9.2 6.8 0 2.1-2 3.5-4.6 3.5-2.4 0-4.2-1-4.9-2.6"/></symbol>
+    <symbol id="i-p-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M13.5 4.5l-3 15"/></symbol>
+    <symbol id="i-p-chart" viewBox="0 0 24 24"><path d="M5 20v-8M12 20V5M19 20v-5M3 20.5h18"/></symbol>
+    <symbol id="i-p-snow" viewBox="0 0 24 24"><path d="M12 2.5v19M3.8 7.2l16.4 9.6M3.8 16.8l16.4-9.6M9.4 4.3 12 6.9l2.6-2.6M9.4 19.7 12 17.1l2.6 2.6"/></symbol>
+    <symbol id="i-p-braces" viewBox="0 0 24 24"><path d="M8.5 4C6.5 4 5.5 5 5.5 7v2.5c0 1.5-.9 2.5-2.5 2.5 1.6 0 2.5 1 2.5 2.5V17c0 2 1 3 3 3M15.5 4c2 0 3 1 3 3v2.5c0 1.5.9 2.5 2.5 2.5-1.6 0-2.5 1-2.5 2.5V17c0 2-1 3-3 3"/></symbol>
+    <symbol id="i-p-cap" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5zM6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5M22 9v6"/></symbol>
+  </svg>
 
   <!-- NAV -->
-  <nav id="navbar">
-    <a href="#hero" class="nav-logo">Gabriel Fracalossi</a>
-    <ul class="nav-links">
-      <li><a href="#about">Sobre</a></li>
-      <li><a href="#projects">Projetos</a></li>
-      <li><a href="#stack">Stack</a></li>
-      <li><a href="#contact" class="nav-cta">Contato</a></li>
-    </ul>
-    <div class="nav-hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </div>
-  </nav>
+  <header class="nav" id="navbar">
+    <div class="nav__inner">
+      <a class="brand" href="#top" data-i18n-attr="aria-label:a11y.brand">
+        <span class="brand__mark" aria-hidden="true"><img src="assets/img/logo-g.png" alt="" width="512" height="512" /></span>
+        <span class="brand__name">Gabriel Fracalossi</span>
+      </a>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-inner">
-      <h1 class="hero-title">
-        Construindo soluções<br />
-        <span class="accent">escaláveis</span> e<br />
-        <span class="accent-mint">bem arquitetadas</span>
-      </h1>
+      <div class="nav__panel" id="menu">
+        <nav class="nav__links" data-i18n-attr="aria-label:a11y.mainNav">
+          <a href="#about" data-i18n="nav.about"></a>
+          <a href="#experience" data-i18n="nav.experience"></a>
+          <a href="#projects" data-i18n="nav.projects"></a>
+          <a href="#stack" data-i18n="nav.stack"></a>
+        </nav>
 
-      <p class="hero-sub">
-        Desenvolvedor backend especializado em .NET, APIs robustas e integrações complexas. Ajudo empresas a transformar regras de negócio em produtos com valor real.
-      </p>
+        <div class="lang" role="group" data-i18n-attr="aria-label:a11y.lang">
+          <button type="button" data-lang="pt" lang="pt" aria-pressed="true" data-i18n-attr="aria-label:a11y.langPt">PT</button>
+          <button type="button" data-lang="en" lang="en" aria-pressed="false" data-i18n-attr="aria-label:a11y.langEn">EN</button>
+          <button type="button" data-lang="es" lang="es" aria-pressed="false" data-i18n-attr="aria-label:a11y.langEs">ES</button>
+        </div>
 
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">
-          Ver Projetos
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a href="#contact" class="btn btn-ghost">
-          Entrar em Contato
+        <a class="btn btn--sm" href="#contact">
+          <span class="btn__label" data-i18n="nav.contact"></span>
+          <span class="btn__circle" aria-hidden="true"><svg class="icon icon--stroke"><use href="#i-arrow-right"/></svg></span>
         </a>
       </div>
-    </div>
 
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="section-wrap">
-      <div class="about-grid">
-
-        <div class="about-visual" data-reveal>
-          <div class="about-avatar-wrap">
-            <div class="avatar-ring"></div>
-            <div class="avatar-ring-2"></div>
-            <div class="avatar-placeholder">
-              <img src="profile.png" alt="Gabriel Fracalossi" class="avatar-img" />
-            </div>
-          </div>
-          <div class="about-stats">
-            <div class="stat-card">
-              <div class="stat-num">2</div>
-              <div class="stat-label">Anos de experiência</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-num">+5</div>
-              <div class="stat-label">Projetos reais entregues</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-num">+5</div>
-              <div class="stat-label">APIs desenvolvidas</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-num">5</div>
-              <div class="stat-label">Integrações realizadas</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-content" data-reveal>
-          <div class="section-tag">Sobre mim</div>
-          <h2 class="section-title">Desenvolvedor focado em<br /><span style="color:var(--c-cyan)">backend</span> e produto</h2>
-          <p class="about-text">Sou desenvolvedor backend com foco em .NET e construção de APIs robustas, seguras e escaláveis. Tenho experiência no desenvolvimento de sistemas voltados para regras de negócio complexas, integrações entre serviços e organização de código utilizando princípios como SOLID, Clean Architecture e boas práticas de engenharia de software.</p>
-          <p class="about-text">Mais do que apenas escrever código, meu foco está em entender o problema e construir soluções que realmente gerem valor, seja melhorando performance, facilitando manutenção ou garantindo escalabilidade. Também tenho experiência com frontend e mobile, o que me permite ter uma visão mais completa do produto e colaborar melhor com outras áreas.</p>
-          <p class="about-text">Trabalho principalmente com .NET, ASP.NET Core, HTML, CSS, JavaScript e integrações via APIs REST. Tenho familiaridade com arquitetura de sistemas, autenticação (JWT), modelagem de dados e organização de projetos voltados para crescimento e manutenção a longo prazo.</p>
-          <div class="skill-chips">
-            <span class="chip">.NET / C#</span>
-            <span class="chip">ASP.NET Core</span>
-            <span class="chip">Azure</span>
-            <span class="chip">SQL Server</span>
-            <span class="chip">REST APIs</span>
-            <span class="chip">Clean Architecture</span>
-            <span class="chip">HTML/CSS/JS</span>
-            <span class="chip">JWT Authentication</span>
-          </div>
-        </div>
-
+      <div class="nav__actions">
+        <button class="icon-btn theme-toggle" id="themeToggle" type="button">
+          <svg class="icon icon--stroke icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="icon icon--stroke icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="menu" data-i18n-attr="aria-label:a11y.menuOpen">
+          <svg class="icon icon--stroke icon-menu" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="icon icon--stroke icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
       </div>
     </div>
-  </section>
+  </header>
 
-  <div class="section-divider"></div>
+  <noscript><p style="padding:6rem 1.5rem 1rem;color:#9dacc8">Este portfólio precisa de JavaScript para exibir o conteúdo. / This portfolio needs JavaScript to display its content.</p></noscript>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="section-wrap">
-      <div class="section-header" data-reveal>
-        <div class="section-tag">Portfólio</div>
-        <h2 class="section-title">Projetos e Trabalhos</h2>
-        <p class="section-desc">Uma seleção dos principais projetos em que atuei do backend ao produto final.</p>
-      </div>
-
-      <div class="projects-grid" id="projectsGrid">
-
-        <!-- PROJECT CARD EXAMPLE 1 -->
-        <div class="project-card" data-reveal>
-          <div class="project-thumb">
-            <div class="project-thumb-placeholder">🍽️<span class="thumb-label">receitas.sistemasneo.com.br</span></div>
-            <div class="project-thumb-overlay"></div>
-            <div class="project-tags-top">
-              <span class="tag-pill tag-fullstack">Full Stack</span>
-              <span class="tag-pill tag-integrations">Integrações</span>
-            </div>
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero__stage">
+        <div class="hero__visual">
+          <span class="hero__ghost" aria-hidden="true" data-i18n="hero.ghost"></span>
+          <div class="hero__arch">
+            <img class="hero__portrait" src="assets/img/gabriel.png" width="900" height="900" fetchpriority="high" decoding="async" alt="" data-i18n-attr="alt:a11y.portrait" />
           </div>
-          <div class="project-body">
-            <div class="project-role">Full Stack Developer</div>
-            <h3 class="project-name">Cozinha Inteligente</h3>
-            <p class="project-desc">Desenvolvimento completo de um app mobile para geração de receitas práticas com IA, incluindo cadastro de ingradientes, histórico e favoritos. Implementei integração com o Asaas para processamento de pagamentos. Projeto construído do zero, incluindo backend, frontend, modelagem de dados e arquitetura da aplicação.</p>
-            <div class="project-tech">
-              <span class="tech-tag">.NET</span>
-              <span class="tech-tag">C#</span>
-              <span class="tech-tag">ASP.NET Core</span>
-              <span class="tech-tag">Entity Framework</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">Flutter</span>
-              <span class="tech-tag">Asaas API</span>
-              <span class="tech-tag">OpenAI API</span>
-            </div>
-            <div class="project-footer">
-              <a href="https://receitas.sistemasneo.com.br/" target="_blank" class="project-link">
-                Ver detalhes
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="pill pill--a" aria-hidden="true">.NET 10</span>
+          <span class="pill pill--b" aria-hidden="true">Full Stack</span>
+        </div>
+
+        <div class="hero__content">
+          <div class="hero__copy">
+            <p class="hero__hello" data-i18n="hero.hello"></p>
+            <h1 class="hero__title" data-i18n="hero.title"></h1>
+            <p class="hero__lead" data-i18n="hero.lead"></p>
+            <div class="hero__actions">
+              <a class="btn" href="#contact">
+                <span class="btn__label" data-i18n="hero.ctaPrimary"></span>
+                <span class="btn__circle" aria-hidden="true"><svg class="icon icon--stroke"><use href="#i-arrow-right"/></svg></span>
+              </a>
+              <a class="link-arrow" href="#projects">
+                <span data-i18n="hero.ctaSecondary"></span>
+                <svg class="icon icon--stroke" aria-hidden="true"><use href="#i-arrow-right"/></svg>
               </a>
             </div>
           </div>
-        </div>
 
-        <!-- PROJECT CARD EXAMPLE 2 -->
-        <div class="project-card" data-reveal>
-          <div class="project-thumb">
-            <div class="project-thumb-placeholder">💍<span class="thumb-label">www.estaocasando.com</span></div>
-            <div class="project-thumb-overlay"></div>
-            <div class="project-tags-top">
-              <span class="tag-pill tag-fullstack">Full Stack</span>
-              <span class="tag-pill tag-solo">Solo</span>
-              <span class="tag-pill tag-integrations">Integrações</span>
+          <div class="hero__aside">
+            <p class="status"><span class="status__dot" aria-hidden="true"></span><span data-i18n="hero.status"></span></p>
+            <div class="stat">
+              <span class="stat__label" data-i18n="hero.stat1.label"></span>
+              <span class="stat__value tnum" data-i18n="hero.stat1.value"></span>
             </div>
-          </div>
-          <div class="project-body">
-            <div class="project-role">Full Stack Developer (Projeto Solo)</div>
-            <h3 class="project-name">EstãoCasando.com</h3>
-            <p class="project-desc">Desenvolvimento completo de uma plataforma de criação de sites de casamento personalizados, incluindo sistema de presentes, gestão de convidados e comunicação entre usuários. Implementei integração com a StarkBank para processamento de pagamentos, além de funcionalidades como perfil de fornecedores, depoimentos e sistema de mensagens. Projeto construído do zero, incluindo backend, frontend, modelagem de dados e arquitetura da aplicação.</p>
-            <div class="project-tech">
-              <span class="tech-tag">.NET</span>
-              <span class="tech-tag">C#</span>
-              <span class="tech-tag">ASP.NET Core</span>
-              <span class="tech-tag">Entity Framework</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">HTML/CSS/JS</span>
-              <span class="tech-tag">StarkBank API</span>
+            <div class="stat">
+              <span class="stat__label" data-i18n="hero.stat2.label"></span>
+              <span class="stat__value tnum" data-i18n="hero.stat2.value"></span>
             </div>
-            <div class="project-footer">
-              <a href="https://www.estaocasando.com/" target="_blank" class="project-link">
-                Ver detalhes
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT CARD EXAMPLE 3 -->
-        <div class="project-card" data-reveal>
-          <div class="project-thumb">
-            <div class="project-thumb-placeholder">🏢<span class="thumb-label">www.jnazario.com</span></div>
-            <div class="project-thumb-overlay"></div>
-            <div class="project-tags-top">
-              <span class="tag-pill tag-frontend">Frontend</span>
-              <span class="tag-pill tag-backend">Backend</span>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-role">Frontend Developer & Backend Support</div>
-            <h3 class="project-name">Nazario Sistemas</h3>
-            <p class="project-desc">Desenvolvimento do site institucional da empresa, com foco em layout moderno, responsividade e experiência do usuário. Também participei da criação de endpoints backend para funcionalidades como solicitação de demonstração e captura de leads.</p>
-            <div class="project-tech">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">.NET</span>
-            </div>
-            <div class="project-footer">
-              <a href="https://www.jnazario.com/" target="_blank" class="project-link">
-                Ver detalhes
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT CARD EXAMPLE 4 -->
-        <div class="project-card" data-reveal>
-          <div class="project-thumb">
-            <div class="project-thumb-placeholder">⚡<span class="thumb-label">powerembedded.com.br</span></div>
-            <div class="project-thumb-overlay"></div>
-            <div class="project-tags-top">
-              <span class="tag-pill tag-backend">Backend</span>
-              <span class="tag-pill tag-frontend">Frontend</span>
-              <span class="tag-pill tag-powerbi">PowerBI</span>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-role">Backend Developer (com atuação Full Stack)</div>
-            <h3 class="project-name">Power Embedded</h3>
-            <p class="project-desc">Atuação em ambiente de produção com foco no desenvolvimento e manutenção de sistemas backend em .NET. Responsável pela correção de bugs, implementação de melhorias e desenvolvimento de novas features, além da criação de integrações e automações utilizando Azure Functions. Também colaboro em demandas de frontend e mobile, contribuindo para entregas mais completas e alinhadas com o produto.</p>
-            <div class="project-tech">
-              <span class="tech-tag">.NET</span>
-              <span class="tech-tag">C#</span>
-              <span class="tech-tag">ASP.NET Core</span>
-              <span class="tech-tag">Entity Framework</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">JavaScript</span>
-            </div>
-            <div class="project-footer">
-              <a href="https://powerembedded.com.br/" target="_blank" class="project-link">
-                Ver detalhes
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT CARD EXAMPLE 5 -->
-        <div class="project-card" data-reveal>
-          <div class="project-thumb">
-            <div class="project-thumb-placeholder">❄️<span class="thumb-label">tecnocryo.com.br</span></div>
-            <div class="project-thumb-overlay"></div>
-            <div class="project-tags-top">
-              <span class="tag-pill tag-frontend">Frontend</span>
-              <span class="tag-pill tag-backend">Backend</span>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-role">Frontend Developer & Backend Support</div>
-            <h3 class="project-name">Tecnocryo</h3>
-            <p class="project-desc">Desenvolvimento de site institucional para cliente, com foco em apresentação de serviços, performance e responsividade. Atuação também na integração com backend para captura de contatos e requisições.</p>
-            <div class="project-tech">
-              <span class="tech-tag">Vue.js</span>
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">.NET</span>
-            </div>
-            <div class="project-footer">
-              <a href="https://www.tecnocryo.com.br/" target="_blank" class="project-link">
-                Ver detalhes
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT CARD EXAMPLE 6 -->
-        <div class="project-card" data-reveal>
-          <div class="project-thumb">
-            <div class="project-thumb-placeholder">💰<span class="thumb-label">sistema financeiro</span></div>
-            <div class="project-thumb-overlay"></div>
-            <div class="project-tags-top">
-              <span class="tag-pill tag-backend">Backend</span>
-              <span class="tag-pill tag-frontend">Frontend</span>
-              <span class="tag-pill tag-integrations">Integrações</span>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-role">Backend Developer (com atuação Full Stack)</div>
-            <h3 class="project-name">Sistema Financeiro</h3>
-            <p class="project-desc">Desenvolvimento de um sistema financeiro completo com funcionalidades de gestão, contratos, automações e integrações externas. Atuação na construção da API, integração com serviços como StarkBank, envio de emails, notificações push e recursos envolvendo IA. Projeto focado em regras de negócio complexas e automação de processos.</p>
-            <div class="project-tech">
-              <span class="tech-tag">.NET</span>
-              <span class="tech-tag">C#</span>
-              <span class="tech-tag">ASP.NET Core</span>
-              <span class="tech-tag">Entity Framework</span>
-              <span class="tech-tag">PostgreSQL</span>
-            </div>
-            <div class="project-footer">
-              <a href="https://financeiro.sistemasneo.com.br" target="_blank" class="project-link">
-                Ver detalhes
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT CARD EXAMPLE 7 -->
-        <div class="project-card" data-reveal>
-          <div class="project-thumb">
-            <div class="project-thumb-placeholder">🔧<span class="thumb-label">github / artigo técnico</span></div>
-            <div class="project-thumb-overlay"></div>
-            <div class="project-tags-top">
-              <span class="tag-pill tag-backend">Backend</span>
-              <span class="tag-pill tag-solo">Solo</span>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-role">Backend Developer</div>
-            <h3 class="project-name">MinhaPrimeiraAPI</h3>
-            <p class="project-desc">Projeto didático utilizado em artigos técnicos, demonstrando a criação e evolução de uma API com boas práticas de desenvolvimento. Aborda conceitos como estruturação de projetos, organização de código e construção de endpoints.</p>
-            <div class="project-tech">
-              <span class="tech-tag">.NET</span>
-              <span class="tech-tag">C#</span>
-              <span class="tech-tag">ASP.NET Core</span>
-              <span class="tech-tag">Entity Framework</span>
-              <span class="tech-tag">PostgreSQL</span>
-            </div>
-            <div class="project-footer">
-              <a href="https://github.com/GabrielFracalossi/MinhaPrimeiraApi" target="_blank" class="project-link">
-                Ver detalhes
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT CARD EXAMPLE 8 -->
-        <div class="project-card" data-reveal>
-          <div class="project-thumb">
-            <div class="project-thumb-placeholder">🎓<span class="thumb-label">projetos acadêmicos</span></div>
-            <div class="project-thumb-overlay"></div>
-            <div class="project-tags-top">
-              <span class="tag-pill tag-fullstack">Full Stack</span>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-role">Full Stack Developer</div>
-            <h3 class="project-name">Projetos Acadêmicos</h3>
-            <p class="project-desc">Projetos desenvolvidos durante a graduação com foco em aprendizado prático de desenvolvimento web e mobile. Incluem aplicações com Node.js, frontend web e experimentos com desenvolvimento mobile.</p>
-            <div class="project-tech">
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Flutter</span>
-              <span class="tech-tag">HTML/CSS/JS</span>
-              <span class="tech-tag">APIs REST</span>
-            </div>
-            <div class="project-footer">
-              <a href="https://github.com/GabrielFracalossi" target="_blank" class="project-link">
-                Ver detalhes
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- STACK -->
-  <section id="stack">
-    <div class="section-wrap">
-      <div class="section-header" data-reveal>
-        <div class="section-tag">Tecnologias</div>
-        <h2 class="section-title">Minha Stack</h2>
-        <p class="section-desc">Ferramentas e tecnologias com as quais trabalho no dia a dia.</p>
-      </div>
-
-      <div class="stack-grid">
-        <div class="stack-card" data-reveal>
-          <div class="stack-icon">⚙️</div>
-          <div class="stack-cat">Backend</div>
-          <div class="stack-name">APIs REST</div>
-          <div class="stack-items">
-            <span class="stack-item">.NET</span>
-            <span class="stack-item">C#</span>
-            <span class="stack-item">ASP.NET Core</span>
-            <span class="stack-item">Entity Framework</span>
-          </div>
-        </div>
-        <div class="stack-card" data-reveal style="transition-delay:0.3s">
-          <div class="stack-icon">🌐</div>
-          <div class="stack-cat">Frontend</div>
-          <div class="stack-name">Web & Mobile</div>
-          <div class="stack-items">
-            <span class="stack-item">HTML/CSS/JS</span>
-            <span class="stack-item">Flutter</span>
-            <span class="stack-item">Vue.js</span>
-          </div>
-        </div>
-        <div class="stack-card" data-reveal style="transition-delay:0.2s">
-          <div class="stack-icon">🗄️</div>
-          <div class="stack-cat">Banco de Dados</div>
-          <div class="stack-name">Dados</div>
-          <div class="stack-items">
-            <span class="stack-item">SQL Server</span>
-            <span class="stack-item">PostgreSQL</span>
-            <span class="stack-item">DBeaver</span>
-          </div>
-        </div>
-        <div class="stack-card" data-reveal style="transition-delay:0.3s">
-          <div class="stack-icon">🤖</div>
-          <div class="stack-cat">IA</div>
-          <div class="stack-name">Inteligência Artificial</div>
-          <div class="stack-items">
-            <span class="stack-item">Agentes</span>
-            <span class="stack-item">Azure OpenAI</span>
-            <span class="stack-item">Automação</span>
-            <span class="stack-item">GitHub Copilot</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="section-divider"></div>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="split">
+          <h2 class="section__title" data-i18n="about.title" data-reveal></h2>
+          <div data-reveal>
+            <p class="about__statement" data-i18n="about.statement"></p>
+            <div class="about__cta">
+              <a class="btn" href="#contact">
+                <span class="btn__label" data-i18n="hero.ctaPrimary"></span>
+                <span class="btn__circle" aria-hidden="true"><svg class="icon icon--stroke"><use href="#i-arrow-right"/></svg></span>
+              </a>
+            </div>
+          </div>
+        </div>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="section-wrap">
-      <div class="contact-card" data-reveal>
-        <div class="section-tag">Contato</div>
-        <h2 class="section-title">Vamos conversar?</h2>
-        <p class="section-desc">Se você precisa de um backend sólido, escalável e bem estruturado, é só chamar.</p>
-        <div class="contact-links">
-          <a href="https://www.linkedin.com/in/gabrielfnazario/" target="_blank" class="contact-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            LinkedIn
+        <div class="bento" data-reveal>
+          <article class="card card--wide">
+            <h3 class="card__title" data-i18n="about.card1.title"></h3>
+            <p class="card__text" data-i18n="about.p1"></p>
+            <ul class="chips chips--float">
+              <li class="chip">.NET / C#</li>
+              <li class="chip">ASP.NET Core</li>
+              <li class="chip">Entity Framework</li>
+              <li class="chip">PostgreSQL</li>
+              <li class="chip">Azure</li>
+              <li class="chip">Git / GitHub</li>
+              <li class="chip" data-i18n="about.chip.layered"></li>
+            </ul>
+          </article>
+
+          <article class="card card--wide">
+            <h3 class="card__title" data-i18n="about.card2.title"></h3>
+            <p class="card__text" data-i18n="about.p2"></p>
+            <ul class="chips chips--float">
+              <li class="chip">Flutter</li>
+              <li class="chip">Vue.js</li>
+              <li class="chip">JavaScript</li>
+              <li class="chip">HTML / CSS</li>
+              <li class="chip" data-i18n="about.chip.integrations"></li>
+              <li class="chip">Scrum</li>
+              <li class="chip">Kanban</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="split section__head" data-reveal>
+          <h2 class="section__title" data-i18n="exp.title"></h2>
+          <p class="section__lead" data-i18n="exp.lead"></p>
+        </div>
+
+        <ol class="timeline">
+          <li class="tl-item split" data-reveal>
+            <div class="tl-meta">
+              <span class="tl-date" data-i18n="exp.azure.date"></span>
+              <span class="tl-company">AzureBrasil.cloud</span>
+            </div>
+            <div>
+              <h3 class="tl-role" data-i18n="exp.azure.role"></h3>
+              <span class="tl-path" data-i18n="exp.azure.path"></span>
+              <ul class="tl-list">
+                <li data-i18n="exp.azure.b1"></li>
+                <li data-i18n="exp.azure.b2"></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item split" data-reveal>
+            <div class="tl-meta">
+              <span class="tl-date" data-i18n="exp.nz.date"></span>
+              <span class="tl-company">Nazario Sistemas</span>
+            </div>
+            <div>
+              <h3 class="tl-role" data-i18n="exp.nz.role"></h3>
+              <ul class="tl-list">
+                <li data-i18n="exp.nz.b1"></li>
+                <li data-i18n="exp.nz.b2"></li>
+                <li data-i18n="exp.nz.b3"></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item tl-item--minor split" data-reveal>
+            <div class="tl-meta">
+              <span class="tl-date" data-i18n="exp.vsn.date"></span>
+              <span class="tl-company" data-i18n="exp.vsn.company"></span>
+            </div>
+            <div>
+              <h3 class="tl-role" data-i18n="exp.vsn.role"></h3>
+              <ul class="tl-list"><li data-i18n="exp.vsn.b1"></li></ul>
+            </div>
+          </li>
+
+          <li class="tl-item tl-item--minor split" data-reveal>
+            <div class="tl-meta">
+              <span class="tl-date" data-i18n="exp.b3.date"></span>
+              <span class="tl-company" data-i18n="exp.b3.company"></span>
+            </div>
+            <div>
+              <h3 class="tl-role" data-i18n="exp.b3.role"></h3>
+              <ul class="tl-list"><li data-i18n="exp.b3.b1"></li></ul>
+            </div>
+          </li>
+
+          <li class="tl-item tl-item--minor split" data-reveal>
+            <div class="tl-meta">
+              <span class="tl-date" data-i18n="exp.ja.date"></span>
+              <span class="tl-company" data-i18n="exp.ja.company"></span>
+            </div>
+            <div>
+              <h3 class="tl-role" data-i18n="exp.ja.role"></h3>
+              <ul class="tl-list"><li data-i18n="exp.ja.b1"></li></ul>
+            </div>
+          </li>
+
+          <li class="tl-item tl-item--minor split" data-reveal>
+            <div class="tl-meta">
+              <span class="tl-company" data-i18n="exp.edu.label"></span>
+            </div>
+            <p class="tl-edu-text" data-i18n="exp.edu.text"></p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- NAZARIO SISTEMAS -->
+    <section class="nz" id="nazario">
+      <div class="container">
+        <div class="panel" data-reveal>
+          <svg class="panel__arch" viewBox="0 0 400 500" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><use href="#i-arches"/></svg>
+          <div class="nz__top">
+            <div>
+              <h2 class="nz__title" data-i18n="nz.title"></h2>
+              <p class="nz__lead" data-i18n="nz.lead"></p>
+              <div class="nz__cta">
+                <a class="btn" href="https://www.jnazario.com/" target="_blank" rel="noopener noreferrer">
+                  <span class="btn__label" data-i18n="nz.cta"></span>
+                  <span class="btn__circle" aria-hidden="true"><svg class="icon icon--stroke"><use href="#i-arrow-up-right"/></svg></span>
+                  <span class="sr-only" data-i18n="a11y.newTab"></span>
+                </a>
+              </div>
+            </div>
+            <!-- Logo slot: drop the company logo at assets/img/nazario-logo.png -->
+            <div class="nz__logo slot" data-slot>
+              <svg class="slot__ph icon icon--stroke" aria-hidden="true"><use href="#i-image"/></svg>
+              <img class="slot__img" src="assets/img/nazario-logo.png" alt="" data-i18n-attr="alt:a11y.nzLogo" data-slot-img />
+            </div>
+          </div>
+          <div class="nz__facts">
+            <article class="card card--glass">
+              <h3 class="card__title" data-i18n="nz.f1.title"></h3>
+              <p class="card__text" data-i18n="nz.f1.text"></p>
+            </article>
+            <article class="card card--glass">
+              <h3 class="card__title" data-i18n="nz.f2.title"></h3>
+              <p class="card__text" data-i18n="nz.f2.text"></p>
+            </article>
+            <article class="card card--glass">
+              <h3 class="card__title" data-i18n="nz.f3.title"></h3>
+              <p class="card__text" data-i18n="nz.f3.text"></p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="split section__head" data-reveal>
+          <h2 class="section__title" data-i18n="projects.title"></h2>
+          <p class="section__lead" data-i18n="projects.lead"></p>
+        </div>
+        <div class="projects" id="projectsGrid"><!-- rendered from js/projects.js --></div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="section" id="stack">
+      <div class="container">
+        <div class="panel panel--feature" data-reveal>
+          <div class="feature__head">
+            <h2 class="feature__title" data-i18n="stack.title"></h2>
+            <p class="feature__lead" data-i18n="stack.lead"></p>
+          </div>
+
+          <div class="bento bento--stack">
+            <article class="bcard bcard--glass b-lang">
+              <span class="bcard__mark" aria-hidden="true">.NET</span>
+              <h3 class="bcard__title" data-i18n="stack.lang"></h3>
+              <ul class="chips chips--float"><li class="chip">C#</li><li class="chip">.NET</li><li class="chip">.NET Core</li><li class="chip">ASP.NET Core</li><li class="chip">Web API REST</li><li class="chip">HTML</li><li class="chip">CSS</li><li class="chip">JavaScript</li><li class="chip">Node.js</li><li class="chip">Vue.js</li><li class="chip">Flutter</li></ul>
+            </article>
+            <article class="bcard bcard--paper b-data">
+              <h3 class="bcard__title" data-i18n="stack.data"></h3>
+              <ul class="chips chips--float"><li class="chip">Entity Framework</li><li class="chip">PostgreSQL</li><li class="chip" data-i18n="stack.item.apiIntegration"></li><li class="chip">JSON</li></ul>
+            </article>
+            <article class="bcard bcard--glass b-cloud">
+              <h3 class="bcard__title" data-i18n="stack.cloud"></h3>
+              <ul class="chips chips--float"><li class="chip">Microsoft Azure</li><li class="chip">Azure Functions</li><li class="chip">Git</li><li class="chip">GitHub</li><li class="chip">DevOps</li></ul>
+              <svg class="orbit" viewBox="0 0 300 150" aria-hidden="true">
+                <path class="orbit__ring" d="M10 150a140 140 0 0 1 280 0"/>
+                <path class="orbit__ring" d="M50 150a100 100 0 0 1 200 0"/>
+                <g class="orbit__node"><circle cx="24" cy="98" r="17"/><text x="24" y="103" text-anchor="middle">Az</text></g>
+                <g class="orbit__node"><circle cx="150" cy="10" r="17"/><text x="150" y="15" text-anchor="middle">Git</text></g>
+                <g class="orbit__node"><circle cx="276" cy="98" r="17"/><text x="276" y="103" text-anchor="middle">GH</text></g>
+              </svg>
+            </article>
+            <article class="bcard bcard--paper b-arch">
+              <h3 class="bcard__title" data-i18n="stack.arch"></h3>
+              <ul class="chips chips--float"><li class="chip" data-i18n="stack.item.layered"></li><li class="chip" data-i18n="stack.item.oop"></li><li class="chip" data-i18n="stack.item.refactor"></li><li class="chip" data-i18n="stack.item.perf"></li><li class="chip" data-i18n="stack.item.migration"></li></ul>
+            </article>
+            <article class="bcard bcard--paper b-method">
+              <h3 class="bcard__title" data-i18n="stack.method"></h3>
+              <ul class="chips chips--float"><li class="chip">Scrum</li><li class="chip">Kanban</li></ul>
+            </article>
+            <article class="bcard bcard--glass b-ai">
+              <h3 class="bcard__title" data-i18n="stack.ai"></h3>
+              <ul class="chips chips--float"><li class="chip">OpenAI API</li><li class="chip">Azure OpenAI</li><li class="chip">GitHub Copilot</li><li class="chip" data-i18n="stack.item.agents"></li></ul>
+            </article>
+            <article class="bcard bcard--paper b-langs">
+              <h3 class="bcard__title" data-i18n="stack.langs"></h3>
+              <ul class="chips chips--float"><li class="chip" data-i18n="stack.item.pt"></li><li class="chip" data-i18n="stack.item.en"></li><li class="chip" data-i18n="stack.item.es"></li></ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="container" data-reveal>
+        <h2 class="contact__title" data-i18n="contact.title"></h2>
+        <p class="contact__lead" data-i18n="contact.lead"></p>
+        <a class="contact__email" href="mailto:gabrielfnazariodev@hotmail.com">gabrielfnazariodev@hotmail.com</a>
+        <div class="contact__links">
+          <a class="contact__link" href="https://www.linkedin.com/in/gabrielfnazario/" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn<span class="sr-only" data-i18n="a11y.newTab"></span>
           </a>
-          <a href="https://github.com/GabrielFracalossi" target="_blank" class="contact-link">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-            GitHub
+          <a class="contact__link" href="https://github.com/GabrielFracalossi" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub<span class="sr-only" data-i18n="a11y.newTab"></span>
           </a>
-          <a href="https://wa.me/5527997972249?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Encontrei%20seu%20portf%C3%B3lio%20e%20tenho%20interesse%20nos%20seus%20servi%C3%A7os.%20Podemos%20conversar%3F" target="_blank" class="contact-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp
+          <a class="contact__link" data-whatsapp="5527997972249" href="https://wa.me/5527997972249" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp<span class="sr-only" data-i18n="a11y.newTab"></span>
           </a>
         </div>
-        <a href="mailto:gabrielfnazariodev@hotmail.com" class="contact-email">gabrielfnazariodev@hotmail.com</a>
+        <p class="contact__where" data-i18n="contact.where"></p>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <p class="footer-copy">© 2026 <span>Gabriel Fracalossi</span></p>
-    <a href="#hero" class="footer-back">
-      Voltar ao topo
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 11V3M3 7l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p data-i18n="footer.rights"></p>
+      <a class="footer__top" href="#top">
+        <span data-i18n="footer.top"></span>
+        <svg class="icon icon--stroke" aria-hidden="true"><use href="#i-arrow-up"/></svg>
+      </a>
+    </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="js/i18n/pt.js"></script>
+  <script src="js/i18n/en.js"></script>
+  <script src="js/i18n/es.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
+  <script>document.documentElement.classList.add('i18n-ready');</script>
 </body>
 </html>
