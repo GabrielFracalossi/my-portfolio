@@ -2,35 +2,37 @@
    PROJECTS — add, remove or reorder projects here (newest first).
    Texts (role + description) live in js/i18n/*.js under
    `projects.<id>.role` and `projects.<id>.desc`.
-   shot: cover screenshot (16:9). Without it a typographic tile is drawn
-   from `glyph` + `variant` (a–e, gradients in css/sections.css).
+
+   Cover of each card = gradient tile + icon badge:
+     icon:    id of a symbol in the sprite at the top of index.html (i-p-*)
+     logo:    (optional) path to a logo image; wins over `icon`. Not used by default.
+     variant: gradient of the tile (a–e, v) — see css/sections.css
    ───────────────────────────────────────────────────────────── */
 window.PROJECTS = [
   {
     id: 'vergi',
     name: 'Vergi',
-    featured: true,
+    icon: 'i-p-calendar',
+    variant: 'v',
     domain: 'vergi.sistemasneo.com.br',
     href: 'https://vergi.sistemasneo.com.br/',
-    tags: ['product', 'fullstack', 'integrations'],
+    tags: ['fullstack', 'mobile', 'integrations'],
     tech: ['.NET 10', 'ASP.NET Core', 'Entity Framework', 'PostgreSQL', 'Flutter Web', 'Stripe', 'Azure']
   },
   {
     id: 'cozinha',
-    shot: 'assets/img/projects/cozinha.jpg',
     name: 'Cozinha Inteligente',
-    glyph: 'CI',
+    icon: 'i-p-plate',
     variant: 'c',
     domain: 'receitas.sistemasneo.com.br',
     href: 'https://receitas.sistemasneo.com.br/',
-    tags: ['fullstack', 'integrations'],
+    tags: ['fullstack', 'mobile', 'integrations'],
     tech: ['.NET', 'C#', 'ASP.NET Core', 'Entity Framework', 'PostgreSQL', 'Flutter', 'Asaas API', 'OpenAI API']
   },
   {
     id: 'estaocasando',
-    shot: 'assets/img/projects/estaocasando.jpg',
     name: 'EstãoCasando.com',
-    glyph: 'EC',
+    icon: 'i-p-ring',
     variant: 'b',
     domain: 'www.estaocasando.com',
     href: 'https://www.estaocasando.com/',
@@ -39,9 +41,8 @@ window.PROJECTS = [
   },
   {
     id: 'nazario',
-    shot: 'assets/img/projects/nazario.jpg',
     name: 'Nazario Sistemas',
-    glyph: 'NS',
+    icon: 'i-p-code',
     variant: 'a',
     domain: 'www.jnazario.com',
     href: 'https://www.jnazario.com/',
@@ -50,9 +51,8 @@ window.PROJECTS = [
   },
   {
     id: 'powerembedded',
-    shot: 'assets/img/projects/powerembedded.jpg',
     name: 'Power Embedded',
-    glyph: 'PE',
+    icon: 'i-p-chart',
     variant: 'e',
     domain: 'powerembedded.com.br',
     href: 'https://powerembedded.com.br/',
@@ -61,9 +61,8 @@ window.PROJECTS = [
   },
   {
     id: 'tecnocryo',
-    shot: 'assets/img/projects/tecnocryo.jpg',
     name: 'Tecnocryo',
-    glyph: 'TC',
+    icon: 'i-p-snow',
     variant: 'c',
     domain: 'www.tecnocryo.com.br',
     href: 'https://www.tecnocryo.com.br/',
@@ -73,7 +72,7 @@ window.PROJECTS = [
   {
     id: 'financeiro',
     name: 'Sistema Financeiro',
-    glyph: 'SF',
+    icon: 'i-p-dollar',
     variant: 'd',
     domain: 'financeiro.sistemasneo.com.br',
     href: 'https://financeiro.sistemasneo.com.br',
@@ -83,7 +82,7 @@ window.PROJECTS = [
   {
     id: 'minhaprimeiraapi',
     name: 'MinhaPrimeiraAPI',
-    glyph: 'API',
+    icon: 'i-p-braces',
     variant: 'a',
     domain: 'github.com/GabrielFracalossi',
     href: 'https://github.com/GabrielFracalossi/MinhaPrimeiraApi',
@@ -94,7 +93,7 @@ window.PROJECTS = [
   {
     id: 'academicos',
     name: 'Projetos Acadêmicos',
-    glyph: 'UV',
+    icon: 'i-p-cap',
     variant: 'b',
     domain: 'github.com/GabrielFracalossi',
     href: 'https://github.com/GabrielFracalossi',
@@ -117,19 +116,15 @@ window.PROJECTS = [
       .join('');
     var tech = p.tech.map(function (t) { return '<li>' + t + '</li>'; }).join('');
 
-    var thumb = p.featured
-      ? '<img class="project__logo project__logo--dark" src="assets/img/vergi-wordmark-dark.png" alt="" width="1000" height="407" loading="lazy" decoding="async">' +
-        '<img class="project__logo project__logo--light" src="assets/img/vergi-wordmark-light.png" alt="" width="1000" height="407" loading="lazy" decoding="async">'
-      : p.shot
-        ? '<img class="project__shot" src="' + p.shot + '" alt="" width="960" height="540" loading="lazy" decoding="async">'
-        : '<span class="project__glyph" aria-hidden="true">' + p.glyph + '</span>';
-
-    var thumbClass = p.featured ? 'vergi' : p.variant;
+    var mark = p.logo
+      ? '<img class="project__logo" src="' + p.logo + '" alt="" width="279" height="512" loading="lazy" decoding="async">'
+      : '<svg class="icon icon--stroke project__icon" aria-hidden="true"><use href="#' + p.icon + '"/></svg>';
 
     return (
-      '<article class="project' + (p.featured ? ' project--featured' : '') + '" id="project-' + p.id + '" data-reveal>' +
-        '<div class="project__thumb project__thumb--' + thumbClass + '">' +
-          thumb +
+      '<article class="project" id="project-' + p.id + '" data-reveal>' +
+        '<div class="project__thumb project__thumb--' + p.variant + '">' +
+          '<svg class="project__arches" viewBox="0 0 400 500" aria-hidden="true"><use href="#i-arches"/></svg>' +
+          '<span class="project__badge">' + mark + '</span>' +
           '<div class="project__tags">' + tags + '</div>' +
           '<span class="project__domain">' + p.domain + '</span>' +
         '</div>' +
@@ -149,8 +144,8 @@ window.PROJECTS = [
     );
   }).join('');
 
-  // Cards enter in pairs, never in one identical wave
+  // Cards enter in staggered columns, never in one identical wave
   grid.querySelectorAll('.project').forEach(function (card, i) {
-    card.style.setProperty('--reveal-delay', (i % 2) * 90 + 'ms');
+    card.style.setProperty('--reveal-delay', (i % 3) * 90 + 'ms');
   });
 })();

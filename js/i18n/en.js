@@ -3,7 +3,7 @@ window.I18N = window.I18N || {};
 window.I18N.en = {
   'meta.title': 'Gabriel Fracalossi · .NET Developer',
   'meta.description':
-    'Portfolio of Gabriel Fracalossi, .NET backend developer (C#, ASP.NET Core, Azure) and co-founder of Nazario Sistemas. APIs, integrations and in-house products.',
+    'Portfolio of Gabriel Fracalossi, .NET backend developer (C#, ASP.NET Core, Azure) and co-founder of Nazario Sistemas. APIs, integrations and complete applications.',
 
   'a11y.skip': 'Skip to content',
   'a11y.brand': 'Gabriel Fracalossi, home',
@@ -18,6 +18,8 @@ window.I18N.en = {
   'a11y.themeToDark': 'Switch to dark theme',
   'a11y.portrait': 'Portrait of Gabriel Fracalossi',
   'a11y.newTab': '(opens in a new tab)',
+  'a11y.aboutPhoto': "Photo of Gabriel Fracalossi",
+  'a11y.nzLogo': "Nazario Sistemas logo",
 
   'nav.about': 'About',
   'nav.experience': 'Experience',
@@ -27,15 +29,15 @@ window.I18N.en = {
 
   'hero.hello': "Hi, I'm Gabriel.",
   'hero.title': '.NET backend, APIs and Azure integrations',
-  'hero.lead':
-    'Developer with 2 years of C# and .NET, co-founder of Nazario Sistemas and open to remote opportunities in any time zone.',
+  'hero.lead': "Developer with 2 years of C# and .NET, co-founder of Nazario Sistemas and open to opportunities in Brazil and abroad, in any time zone.",
   'hero.ctaPrimary': 'Get in touch',
   'hero.ctaSecondary': 'View projects',
-  'hero.status': 'Open to remote, international roles',
+  'hero.status': "Open to opportunities in Brazil and abroad",
   'hero.stat1.value': '2',
   'hero.stat1.label': 'years of experience with C# and .NET',
   'hero.stat2.value': '2 min → 15 s',
   'hero.stat2.label': 'critical calls after the refactor',
+  'hero.ghost': "DEVELOPER",
 
   'about.title': 'About me',
   'about.statement':
@@ -43,9 +45,11 @@ window.I18N.en = {
   'about.p1':
     'I started as an intern and reached mid-level in two years, working with C#, ASP.NET Core and Azure. My focus is backend: layered architecture, service integrations and performance, always keeping the code simple to maintain.',
   'about.p2':
-    "I'm also a co-founder of Nazario Sistemas, where I build the company's own products alongside my brother. That gave me a product and business perspective, from technical definition to the first contract. When needed, I move across frontend and mobile with JavaScript, Vue.js and Flutter.",
+    "I'm also a co-founder of Nazario Sistemas, where I build software alongside my brother. That gave me a product and business perspective, from technical definition to the first contract. When needed, I move across frontend and mobile with JavaScript, Vue.js and Flutter.",
   'about.chip.layered': 'Layered architecture',
   'about.chip.integrations': 'API integration',
+  'about.card1.title': "Backend built to last",
+  'about.card2.title': "From code to business",
 
   'exp.title': 'Experience',
   'exp.lead':
@@ -60,7 +64,7 @@ window.I18N.en = {
   'exp.nz.date': 'Jun 2025 – Present',
   'exp.nz.role': 'Co-founder',
   'exp.nz.b1':
-    "Building the company's own products in partnership with my brother, who has almost 20 years of experience in software.",
+    "Building the company's systems in partnership with my brother, who has almost 20 years of experience in software.",
   'exp.nz.b2': "Led the company's first commercial contract, including the final legal steps with the client.",
   'exp.nz.b3':
     'Since August 2026, building out the sales and marketing side: industry events (MLS Festival) and client prospecting.',
@@ -83,16 +87,15 @@ window.I18N.en = {
 
   'nz.title': 'Beyond code, a software company',
   'nz.lead':
-    "I've been a co-founder of Nazario Sistemas since June 2025. My brother, who has been building software for almost 20 years, and I create our own products.",
-  'nz.f1.title': 'In-house products',
-  'nz.f1.text': 'Software built from scratch, from the database to the interface. Vergi is the newest.',
+    "I've been a co-founder of Nazario Sistemas since June 2025. My brother, who has been building software for almost 20 years, and I build systems and apps together.",
+  'nz.f1.title': 'Built from scratch',
+  'nz.f1.text': 'Systems and apps built from scratch, from the database to the interface. Vergi is the newest.',
   'nz.f2.title': 'First contract',
   'nz.f2.text': "I led the company's first commercial contract, through the final legal steps.",
   'nz.f3.title': 'Sales and marketing',
   'nz.f3.text':
     'Since August 2026, I have been building the sales and marketing side, attending industry events and prospecting clients.',
   'nz.cta': 'Meet Nazario Sistemas',
-  'nz.ctaProject': 'See Vergi',
 
   'projects.title': 'Projects',
   'projects.lead':
@@ -103,16 +106,15 @@ window.I18N.en = {
   'tag.fullstack': 'Full Stack',
   'tag.backend': 'Backend',
   'tag.frontend': 'Frontend',
+  'tag.mobile': 'Mobile',
   'tag.solo': 'Solo project',
   'tag.integrations': 'Integrations',
-  'tag.product': 'In-house product',
   'tag.powerbi': 'Power BI',
   'tag.didactic': 'Educational',
   'tag.academic': 'Academic',
 
-  'projects.vergi.role': 'In-house product · Nazario Sistemas',
-  'projects.vergi.desc':
-    'White-label online scheduling SaaS, built from scratch with my partner at Nazario Sistemas. Each business gets a public page with its own branding, and customers find open slots and book in a few taps. Includes a management dashboard, Stripe subscriptions, e-mail and push reminders, and an interface in three languages.',
+  'projects.vergi.role': 'Full Stack Developer · Nazario Sistemas',
+  'projects.vergi.desc': "White-label scheduling app, built from scratch with my partner at Nazario Sistemas. Each business gets a public page with its own branding, and customers find open slots and book in a few taps. Includes a management dashboard, Stripe subscriptions, e-mail and push reminders, and an interface in three languages.",
   'projects.cozinha.role': 'Full Stack Developer',
   'projects.cozinha.desc':
     'Mobile app that generates practical recipes with AI, with ingredient tracking, history and favorites, and payments integrated with Asaas. Built from scratch: backend, app, data modeling and architecture.',
@@ -159,8 +161,7 @@ window.I18N.en = {
   'stack.item.es': 'Spanish (intermediate)',
 
   'contact.title': "Let's talk.",
-  'contact.lead':
-    "I'm open to remote .NET backend opportunities and to conversations about projects with Nazario Sistemas. Reach out through whichever channel you prefer.",
+  'contact.lead': "I'm open to .NET backend opportunities in Brazil or abroad, and to conversations about projects with Nazario Sistemas. Reach out through whichever channel you prefer.",
   'contact.where': 'Vila Velha, Brazil (GMT-3) · Flexible availability across all time zones',
   'contact.whatsappMsg': 'Hi! I found your portfolio and would like to talk.',
 

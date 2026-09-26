@@ -34,6 +34,34 @@
   });
   document.addEventListener('gf:languagechange', function () { setMenu(isOpen()); });
 
+  /* Hero ghost word: sized so the whole word spans the stage, whatever the language */
+  var ghost = document.querySelector('.hero__ghost');
+  function fitGhost() {
+    if (!ghost) return;
+    var stage = ghost.closest('.hero__stage');
+    var rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    ghost.style.fontSize = '100px';
+    var natural = ghost.getBoundingClientRect().width;
+    if (!natural) return;
+    ghost.style.fontSize = Math.min((100 * stage.clientWidth * 0.96) / natural, rem * 17) + 'px';
+  }
+  var fitTimer;
+  window.addEventListener('resize', function () { clearTimeout(fitTimer); fitTimer = setTimeout(fitGhost, 80); });
+  document.addEventListener('gf:languagechange', fitGhost);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitGhost);
+  fitGhost();
+
+  /* Optional image slots (about photo, Nazario logo): show the placeholder until the file exists */
+  document.querySelectorAll('[data-slot]').forEach(function (slot) {
+    var img = slot.querySelector('[data-slot-img]');
+    if (!img) return;
+    function ok() { slot.classList.add('has-img'); }
+    function fail() { img.hidden = true; slot.classList.remove('has-img'); }
+    img.addEventListener('load', ok);
+    img.addEventListener('error', fail);
+    if (img.complete) { if (img.naturalWidth) ok(); else fail(); }
+  });
+
   /* Active section in the nav */
   var links = Array.prototype.slice.call(document.querySelectorAll('.nav__links a[href^="#"]'));
   var sections = links

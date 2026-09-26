@@ -41,6 +41,9 @@
   --sky: #0097f5;
   --cyan: #00e4f5;
   --mint: #00f5b3;
+
+  /* Feature panel (Stack): same saturated blue in both themes */
+  --feature-bg: linear-gradient(180deg, #0b36c8 0%, #0a2590 55%, #08196b 100%);
 }
 
 /* ── DARK (default) — the original palette ─────────────────── */

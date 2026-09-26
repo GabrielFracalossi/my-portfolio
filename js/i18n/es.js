@@ -3,7 +3,7 @@ window.I18N = window.I18N || {};
 window.I18N.es = {
   'meta.title': 'Gabriel Fracalossi · Desarrollador .NET',
   'meta.description':
-    'Portafolio de Gabriel Fracalossi, desarrollador backend .NET (C#, ASP.NET Core, Azure) y cofundador de Nazario Sistemas. APIs, integraciones y productos propios.',
+    'Portafolio de Gabriel Fracalossi, desarrollador backend .NET (C#, ASP.NET Core, Azure) y cofundador de Nazario Sistemas. APIs, integraciones y aplicaciones completas.',
 
   'a11y.skip': 'Saltar al contenido',
   'a11y.brand': 'Gabriel Fracalossi, inicio',
@@ -18,6 +18,8 @@ window.I18N.es = {
   'a11y.themeToDark': 'Cambiar al tema oscuro',
   'a11y.portrait': 'Retrato de Gabriel Fracalossi',
   'a11y.newTab': '(se abre en una pestaña nueva)',
+  'a11y.aboutPhoto': "Foto de Gabriel Fracalossi",
+  'a11y.nzLogo': "Logo de Nazario Sistemas",
 
   'nav.about': 'Sobre mí',
   'nav.experience': 'Trayectoria',
@@ -27,15 +29,15 @@ window.I18N.es = {
 
   'hero.hello': 'Hola, soy Gabriel.',
   'hero.title': 'Backend .NET, APIs e integraciones en Azure',
-  'hero.lead':
-    'Desarrollador con 2 años de C# y .NET, cofundador de Nazario Sistemas y abierto a oportunidades remotas en cualquier huso horario.',
+  'hero.lead': "Desarrollador con 2 años de C# y .NET, cofundador de Nazario Sistemas y abierto a oportunidades en Brasil y en el exterior, en cualquier huso horario.",
   'hero.ctaPrimary': 'Hablemos',
   'hero.ctaSecondary': 'Ver proyectos',
-  'hero.status': 'Disponible para puestos remotos internacionales',
+  'hero.status': "Abierto a oportunidades en Brasil y en el exterior",
   'hero.stat1.value': '2',
   'hero.stat1.label': 'años de experiencia con C# y .NET',
   'hero.stat2.value': '2 min → 15 s',
   'hero.stat2.label': 'llamadas críticas tras la refactorización',
+  'hero.ghost': "DESARROLLADOR",
 
   'about.title': 'Sobre mí',
   'about.statement':
@@ -43,9 +45,11 @@ window.I18N.es = {
   'about.p1':
     'Empecé como pasante y llegué al nivel semisenior en dos años, trabajando con C#, ASP.NET Core y Azure. Mi foco es el backend: arquitectura en capas, integraciones entre servicios y rendimiento, cuidando siempre que el código siga siendo simple de mantener.',
   'about.p2':
-    'También soy cofundador de Nazario Sistemas, donde desarrollo productos propios junto a mi hermano. Eso me dio una visión de producto y de negocio, desde la definición técnica hasta el primer contrato. Cuando hace falta, me muevo por el frontend y el móvil con JavaScript, Vue.js y Flutter.',
+    'También soy cofundador de Nazario Sistemas, donde desarrollo software junto a mi hermano. Eso me dio una visión de producto y de negocio, desde la definición técnica hasta el primer contrato. Cuando hace falta, me muevo por el frontend y el móvil con JavaScript, Vue.js y Flutter.',
   'about.chip.layered': 'Arquitectura en capas',
   'about.chip.integrations': 'Integración de APIs',
+  'about.card1.title': "Backend hecho para durar",
+  'about.card2.title': "Del código al negocio",
 
   'exp.title': 'Trayectoria',
   'exp.lead':
@@ -60,7 +64,7 @@ window.I18N.es = {
   'exp.nz.date': 'Jun 2025 – Actual',
   'exp.nz.role': 'Cofundador',
   'exp.nz.b1':
-    'Desarrollo de los productos propios de la empresa, en sociedad con mi hermano, que trabaja con software desde hace casi 20 años.',
+    'Desarrollo de los sistemas de la empresa, en sociedad con mi hermano, que trabaja con software desde hace casi 20 años.',
   'exp.nz.b2': 'Conducción del primer contrato comercial, incluidos los trámites legales finales con el cliente.',
   'exp.nz.b3':
     'Desde agosto de 2026, estructuración del frente comercial y de marketing: eventos del sector (MLS Festival) y prospección de clientes.',
@@ -84,16 +88,15 @@ window.I18N.es = {
 
   'nz.title': 'Más allá del código, una empresa de software',
   'nz.lead':
-    'Soy cofundador de Nazario Sistemas desde junio de 2025. Construimos productos propios junto a mi hermano, que desarrolla software desde hace casi 20 años.',
-  'nz.f1.title': 'Productos propios',
-  'nz.f1.text': 'Software creado desde cero, de la base de datos a la interfaz. Vergi es el más reciente.',
+    'Soy cofundador de Nazario Sistemas desde junio de 2025. Construimos sistemas y aplicaciones junto a mi hermano, que desarrolla software desde hace casi 20 años.',
+  'nz.f1.title': 'Software desde cero',
+  'nz.f1.text': 'Sistemas y aplicaciones creados desde cero, de la base de datos a la interfaz. Vergi es el más reciente.',
   'nz.f2.title': 'Primer contrato',
   'nz.f2.text': 'Conduje el cierre del primer contrato comercial de la empresa, hasta los últimos trámites legales.',
   'nz.f3.title': 'Frente comercial',
   'nz.f3.text':
     'Desde agosto de 2026 estructuro el área comercial y de marketing, con presencia en eventos del sector y prospección de clientes.',
   'nz.cta': 'Conocer Nazario Sistemas',
-  'nz.ctaProject': 'Ver Vergi',
 
   'projects.title': 'Proyectos',
   'projects.lead':
@@ -104,16 +107,15 @@ window.I18N.es = {
   'tag.fullstack': 'Full Stack',
   'tag.backend': 'Backend',
   'tag.frontend': 'Frontend',
+  'tag.mobile': 'Móvil',
   'tag.solo': 'Proyecto solo',
   'tag.integrations': 'Integraciones',
-  'tag.product': 'Producto propio',
   'tag.powerbi': 'Power BI',
   'tag.didactic': 'Didáctico',
   'tag.academic': 'Académico',
 
-  'projects.vergi.role': 'Producto propio · Nazario Sistemas',
-  'projects.vergi.desc':
-    'SaaS white-label de reservas en línea, creado desde cero junto a mi socio en Nazario Sistemas. Cada empresa tiene una página pública con su propia marca, y los clientes encuentran horarios libres y reservan en pocos toques. Incluye panel de gestión, suscripción con Stripe, recordatorios por e-mail y push, e interfaz en tres idiomas.',
+  'projects.vergi.role': 'Full Stack Developer · Nazario Sistemas',
+  'projects.vergi.desc': "App de agendamientos white-label, creada desde cero junto a mi socio en Nazario Sistemas. Cada empresa tiene una página pública con su propia marca, y los clientes encuentran horarios libres y reservan en pocos toques. Incluye panel de gestión, suscripción con Stripe, recordatorios por e-mail y push, e interfaz en tres idiomas.",
   'projects.cozinha.role': 'Full Stack Developer',
   'projects.cozinha.desc':
     'App móvil que genera recetas prácticas con IA, con registro de ingredientes, historial y favoritos, y pagos integrados con Asaas. Construido desde cero: backend, app, modelado de datos y arquitectura.',
@@ -160,8 +162,7 @@ window.I18N.es = {
   'stack.item.es': 'Español (intermedio)',
 
   'contact.title': '¿Hablamos?',
-  'contact.lead':
-    'Estoy abierto a oportunidades remotas de backend .NET y a conversar sobre proyectos con Nazario Sistemas. Escríbeme por el canal que prefieras.',
+  'contact.lead': "Estoy abierto a oportunidades de backend .NET, en Brasil o en el exterior, y a conversar sobre proyectos con Nazario Sistemas. Escríbeme por el canal que prefieras.",
   'contact.where': 'Vila Velha, Brasil (GMT-3) · Disponibilidad flexible en todos los husos horarios',
   'contact.whatsappMsg': 'Hola, ¿qué tal? Encontré tu portafolio y me gustaría conversar.',
 
