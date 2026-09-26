@@ -9,6 +9,7 @@
   var STORAGE_KEY = 'gf-lang';
   var DEFAULT = 'pt';
   var HTML_LANG = { pt: 'pt-BR', en: 'en', es: 'es' };
+  var OG_LOCALE = { pt: 'pt_BR', en: 'en_US', es: 'es_ES' };
   var dict = window.I18N || {};
   var current = DEFAULT;
 
@@ -43,10 +44,14 @@
     document.title = t('meta.title');
     var meta = document.querySelector('meta[name="description"]');
     if (meta) meta.setAttribute('content', t('meta.description'));
-    var og = document.querySelectorAll('meta[property="og:title"], meta[property="og:description"]');
-    og.forEach(function (m) {
-      m.setAttribute('content', t(m.getAttribute('property') === 'og:title' ? 'meta.title' : 'meta.description'));
+    document.querySelectorAll('meta[property="og:title"], meta[name="twitter:title"]').forEach(function (m) {
+      m.setAttribute('content', t('meta.title'));
     });
+    document.querySelectorAll('meta[property="og:description"], meta[name="twitter:description"]').forEach(function (m) {
+      m.setAttribute('content', t('meta.description'));
+    });
+    var locale = document.querySelector('meta[property="og:locale"]');
+    if (locale) locale.setAttribute('content', OG_LOCALE[lang]);
 
     apply(document);
 

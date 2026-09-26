@@ -2,7 +2,7 @@
 window.I18N = window.I18N || {};
 window.I18N.pt = {
   'meta.title': "Gabriel Fracalossi · Desenvolvedor Full Stack .NET",
-  'meta.description': "Portfólio de Gabriel Fracalossi, desenvolvedor full stack com foco em backend .NET (C#, ASP.NET Core, Azure) e sócio-fundador da Nazario Sistemas. Do planejamento ao deploy: APIs, integrações e aplicações completas.",
+  'meta.description': "Desenvolvedor full stack com foco em backend .NET e sócio-fundador da Nazario Sistemas. Do planejamento ao deploy: APIs, integrações e aplicativos completos.",
 
   'a11y.skip': 'Pular para o conteúdo',
   'a11y.brand': 'Gabriel Fracalossi, início',
