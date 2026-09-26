@@ -1,9 +1,8 @@
 /* Português (padrão). Every other language mirrors these keys. */
 window.I18N = window.I18N || {};
 window.I18N.pt = {
-  'meta.title': 'Gabriel Fracalossi · Desenvolvedor .NET',
-  'meta.description':
-    'Portfólio de Gabriel Fracalossi, desenvolvedor backend .NET (C#, ASP.NET Core, Azure) e sócio-fundador da Nazario Sistemas. APIs, integrações e aplicações completas.',
+  'meta.title': "Gabriel Fracalossi · Desenvolvedor Full Stack .NET",
+  'meta.description': "Portfólio de Gabriel Fracalossi, desenvolvedor full stack com foco em backend .NET (C#, ASP.NET Core, Azure) e sócio-fundador da Nazario Sistemas. Do planejamento ao deploy: APIs, integrações e aplicações completas.",
 
   'a11y.skip': 'Pular para o conteúdo',
   'a11y.brand': 'Gabriel Fracalossi, início',
@@ -28,8 +27,8 @@ window.I18N.pt = {
   'nav.contact': 'Contato',
 
   'hero.hello': 'Olá, eu sou o Gabriel.',
-  'hero.title': 'Backend .NET, APIs e integrações em Azure',
-  'hero.lead': "Desenvolvedor com 2 anos de C# e .NET, sócio-fundador da Nazario Sistemas e aberto a oportunidades no Brasil e no exterior, em qualquer fuso horário.",
+  'hero.title': "Software completo, do planejamento ao deploy",
+  'hero.lead': "Desenvolvedor full stack com 2 anos de C# e .NET e foco em backend, sócio-fundador da Nazario Sistemas e aberto a oportunidades no Brasil e no exterior, em qualquer fuso horário.",
   'hero.ctaPrimary': 'Fale comigo',
   'hero.ctaSecondary': 'Ver projetos',
   'hero.status': "Aberto a oportunidades no Brasil e no exterior",
@@ -40,20 +39,16 @@ window.I18N.pt = {
   'hero.ghost': "DESENVOLVEDOR",
 
   'about.title': 'Sobre mim',
-  'about.statement':
-    'Transformo regras de negócio em APIs rápidas, seguras e fáceis de evoluir, sem perder de vista o produto que existe além do código.',
-  'about.p1':
-    'Comecei como estagiário e cheguei ao nível pleno em dois anos, trabalhando com C#, ASP.NET Core e Azure. Meu foco é o backend: arquitetura em camadas, integrações entre serviços e performance, sempre com cuidado para que o código continue simples de manter.',
-  'about.p2':
-    'Também sou sócio-fundador da Nazario Sistemas, onde desenvolvo software ao lado do meu irmão. Isso me deu uma visão de produto e de negócio, da definição técnica ao primeiro contrato. Quando preciso, circulo pelo frontend e pelo mobile com JavaScript, Vue.js e Flutter.',
+  'about.statement': "Cuido de um produto de ponta a ponta, do planejamento ao deploy e à venda, com o backend em .NET como meu ponto mais forte.",
+  'about.p1': "Comecei como estagiário e cheguei ao nível pleno em dois anos. No backend, trabalho com C#, ASP.NET Core e Entity Framework. Também construo interfaces web e mobile com JavaScript, Vue.js e Flutter, e cuido de arquitetura em camadas, versionamento com Git e GitHub, deploy e infraestrutura no Azure.",
+  'about.p2': "Como sócio-fundador da Nazario Sistemas, desenvolvo software ao lado do meu irmão e participo de todas as etapas: planejamento, definições técnicas e de produto, desenvolvimento, entrega e também a parte comercial, do primeiro contrato à prospecção de clientes. Meu foco continua sendo o backend.",
   'about.chip.layered': 'Arquitetura em camadas',
   'about.chip.integrations': 'Integração de APIs',
-  'about.card1.title': "Backend feito para durar",
+  'about.card1.title': "Do banco de dados à interface",
   'about.card2.title': "Do código ao negócio",
 
   'exp.title': 'Trajetória',
-  'exp.lead':
-    'Dois anos de evolução em backend, uma empresa de software em construção e uma bagagem de negócios que aparece no jeito como enxergo o produto.',
+  'exp.lead': "Dois anos de evolução em C# e .NET, uma empresa de software em construção e uma bagagem de negócios que aparece no jeito como enxergo o produto.",
   'exp.azure.date': 'Set 2024 – Ago 2026',
   'exp.azure.role': 'Software Developer',
   'exp.azure.path': 'Estagiário → Júnior → Pleno',
@@ -63,8 +58,7 @@ window.I18N.pt = {
     'Dezenas de funcionalidades e correções entregues em sprints ágeis, com média de 2 tickets por dia, do início do desenvolvimento até a validação do QA.',
   'exp.nz.date': 'Jun 2025 – Atual',
   'exp.nz.role': 'Sócio-fundador',
-  'exp.nz.b1':
-    'Desenvolvimento dos sistemas da empresa, em sociedade com meu irmão, que trabalha com software há quase 20 anos.',
+  'exp.nz.b1': "Desenvolvimento dos sistemas da empresa, do backend à interface, executando as definições técnicas e de produto em sociedade com meu irmão, que trabalha com software há quase 20 anos.",
   'exp.nz.b2': 'Condução do primeiro contrato comercial, incluindo as etapas jurídicas finais com o cliente.',
   'exp.nz.b3':
     'Desde agosto de 2026, estruturação da frente comercial e de marketing: eventos do setor (MLS Festival) e prospecção de clientes.',
@@ -117,7 +111,7 @@ window.I18N.pt = {
   'projects.vergi.desc': "App de agendamentos white-label, criado do zero ao lado do meu sócio na Nazario Sistemas. Cada empresa ganha uma página pública com a própria marca, e os clientes encontram horários livres e agendam em poucos toques. Inclui painel de gestão, assinatura via Stripe, lembretes por e-mail e push, e interface em três idiomas.",
   'projects.cozinha.role': 'Full Stack Developer',
   'projects.cozinha.desc':
-    'App mobile que gera receitas práticas com IA, com cadastro de ingredientes, histórico e favoritos e pagamentos integrados ao Asaas. Construído do zero: backend, app, modelagem de dados e arquitetura.',
+    'App mobile que gera receitas práticas com IA, com cadastro de ingredientes, histórico e favoritos e pagamentos integrados ao Stripe. Construído do zero: backend, app, modelagem de dados e arquitetura.',
   'projects.estaocasando.role': 'Full Stack Developer · Projeto solo',
   'projects.estaocasando.desc':
     'Plataforma para criar sites de casamento personalizados, com lista de presentes, gestão de convidados, perfil de fornecedores, depoimentos e mensagens entre usuários. Pagamentos via StarkBank. Projeto solo, do backend ao frontend.',
@@ -125,8 +119,7 @@ window.I18N.pt = {
   'projects.nazario.desc':
     'Site institucional da empresa, com layout moderno, responsivo e foco na experiência do usuário. Também criei endpoints de backend para solicitação de demonstração e captura de leads.',
   'projects.powerembedded.role': 'Backend Developer · AzureBrasil.cloud',
-  'projects.powerembedded.desc':
-    'Backend .NET em produção: correção de bugs, novas funcionalidades e automações com Azure Functions. Participei da refatoração completa para arquitetura em camadas na migração para .NET 10, que reduziu chamadas críticas de ~2 minutos para ~15 segundos e o deploy de 15 para 9 minutos.',
+  'projects.powerembedded.desc': "Backend .NET em produção: correção de bugs, novas funcionalidades e automações com Azure Functions. Participei da refatoração completa para arquitetura em camadas na migração para .NET 10, que reduziu chamadas críticas de ~2 minutos para ~15 segundos e o deploy de 15 para 9 minutos. Também colaborei em demandas de frontend e mobile.",
   'projects.tecnocryo.role': 'Frontend Developer e apoio no backend',
   'projects.tecnocryo.desc':
     'Site institucional para cliente, com foco em apresentação de serviços, performance e responsividade, integrado ao backend para captura de contatos e solicitações.',
@@ -144,7 +137,7 @@ window.I18N.pt = {
   'stack.lead': 'As tecnologias, práticas e ferramentas que uso no dia a dia.',
   'stack.lang': 'Linguagens e frameworks',
   'stack.data': 'Dados e integrações',
-  'stack.cloud': 'Cloud e versionamento',
+  'stack.cloud': "Cloud, deploy e versionamento",
   'stack.arch': 'Arquitetura e boas práticas',
   'stack.method': 'Metodologias',
   'stack.ai': 'IA aplicada',
@@ -161,7 +154,7 @@ window.I18N.pt = {
   'stack.item.es': 'Espanhol (intermediário)',
 
   'contact.title': 'Vamos conversar?',
-  'contact.lead': "Estou aberto a oportunidades em backend .NET, no Brasil ou no exterior, e a conversas sobre projetos com a Nazario Sistemas. Escreva pelo canal que preferir.",
+  'contact.lead': "Estou aberto a oportunidades em desenvolvimento .NET e full stack, no Brasil ou no exterior, e a conversas sobre projetos com a Nazario Sistemas. Escreva pelo canal que preferir.",
   'contact.where': 'Vila Velha, Brasil (GMT-3) · Disponibilidade flexível em todos os fusos horários',
   'contact.whatsappMsg': 'Olá, tudo bem? Encontrei seu portfólio e gostaria de conversar.',
 

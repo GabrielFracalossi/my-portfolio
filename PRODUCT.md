@@ -20,7 +20,7 @@ Personal portfolio of Gabriel Fracalossi Nazario, .NET backend developer (C#, AS
 
 ## Positioning
 
-Two years of hands-on C#/.NET that went from intern to mid-level, plus a founder's view of product: Gabriel also builds and sells software as co-founder of Nazario Sistemas. Balance both: availability for opportunities in Brazil and abroad (owner: "any opportunity is welcome") and visibility for Nazario Sistemas.
+Full stack developer with a declared backend focus (.NET): two years of hands-on C#/.NET that went from intern to mid-level, also working on frontend/mobile (JavaScript, Vue.js, Flutter), architecture, versioning and deploy, plus a founder's view of product covering planning to sales (owner asked for the whole range to show, backend named as the focus only in a few places): Gabriel also builds and sells software as co-founder of Nazario Sistemas. Balance both: availability for opportunities in Brazil and abroad (owner: "any opportunity is welcome") and visibility for Nazario Sistemas.
 
 ## Operating Context
 

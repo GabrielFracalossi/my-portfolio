@@ -27,7 +27,7 @@ window.PROJECTS = [
     domain: 'receitas.sistemasneo.com.br',
     href: 'https://receitas.sistemasneo.com.br/',
     tags: ['fullstack', 'mobile', 'integrations'],
-    tech: ['.NET', 'C#', 'ASP.NET Core', 'Entity Framework', 'PostgreSQL', 'Flutter', 'Asaas API', 'OpenAI API']
+    tech: ['.NET', 'C#', 'ASP.NET Core', 'Entity Framework', 'PostgreSQL', 'Flutter', 'Stripe API', 'OpenAI API']
   },
   {
     id: 'estaocasando',
