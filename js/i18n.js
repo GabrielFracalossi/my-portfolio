@@ -44,10 +44,10 @@
     document.title = t('meta.title');
     var meta = document.querySelector('meta[name="description"]');
     if (meta) meta.setAttribute('content', t('meta.description'));
-    document.querySelectorAll('meta[property="og:title"], meta[name="twitter:title"]').forEach(function (m) {
+    document.querySelectorAll('meta[property="og:title"]').forEach(function (m) {
       m.setAttribute('content', t('meta.title'));
     });
-    document.querySelectorAll('meta[property="og:description"], meta[name="twitter:description"]').forEach(function (m) {
+    document.querySelectorAll('meta[property="og:description"]').forEach(function (m) {
       m.setAttribute('content', t('meta.description'));
     });
     var locale = document.querySelector('meta[property="og:locale"]');
