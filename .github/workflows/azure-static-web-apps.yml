@@ -1,0 +1,45 @@
+# Publishes the site to Azure Static Web Apps.
+#   push to main     -> production (gabrielfracalossi.com.br)
+#   push to refactor -> "staging" preview environment (unlisted URL, for testing before the merge)
+# Needs the repository secret AZURE_STATIC_WEB_APPS_API_TOKEN
+# (Azure portal > Static Web App > Manage deployment token).
+name: Deploy to Azure Static Web Apps
+
+on:
+  push:
+    branches: [main, refactor]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: azure-swa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to production
+        if: github.ref == 'refs/heads/main'
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          action: upload
+          app_location: /
+          skip_app_build: true
+          skip_api_build: true
+
+      - name: Deploy to staging preview
+        if: github.ref != 'refs/heads/main'
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          action: upload
+          app_location: /
+          skip_app_build: true
+          skip_api_build: true
+          deployment_environment: staging
