@@ -42,16 +42,14 @@
   letter-spacing: -0.02em;
 }
 .brand__mark {
-  display: grid;
-  place-items: center;
+  display: block;
   width: 2rem;
   height: 2rem;
+  overflow: hidden;
   border-radius: 9px;
   background: linear-gradient(140deg, var(--blue), var(--sky));
-  color: #fff;
-  font-size: 0.95rem;
-  font-weight: 700;
 }
+.brand__mark img { width: 100%; height: 100%; }
 .brand__name { font-size: var(--fs-base); }
 
 .nav__actions { display: flex; align-items: center; gap: 0.5rem; }
