@@ -217,7 +217,7 @@ components:
 
 **Creative North Star: "The Staged Portrait"**
 
-The portfolio is staged the way the pinned Dribbble reference is staged. Rounded panels are the stage; on the first one a giant ghost word sits behind an arched, cut-out portrait, and proof is stated as numbers in glass cards. The stages then repeat as the bento language: About is a photo slot plus two text cards; Nazario is a stage with glass fact cards; Stack is a saturated blue feature panel of glass and paper cards. Around them everything is quiet: tight grotesk type, hairline rows for the timeline, and a single pill-and-circle button as the only loud control. It refuses the dark-hero, gradient-text, icon-card developer template.
+The portfolio is staged the way the pinned Dribbble reference is staged. Rounded panels are the stage; on the first one a giant ghost word sits behind an arched, cut-out portrait, and proof is stated as numbers in glass cards. The stages then repeat as the bento language: About is two text cards; Nazario is a stage with glass fact cards; Stack is a saturated blue feature panel of glass and paper cards. Around them everything is quiet: tight grotesk type, hairline rows for the timeline, and a single pill-and-circle button as the only loud control. It refuses the dark-hero, gradient-text, icon-card developer template.
 
 The world is theme-paired. In dark (the default, the owner's original palette) the stage is navy and the arch is electric blue, with cyan as the one small signal. In light the stage is cool gray, the arch is cobalt fading to periwinkle, and the button and accent go to ink navy and cobalt. Composition, radii and type do not change between themes; only tokens do. The one exception is deliberate: the Stack feature panel and the project cover tiles carry the same saturated blue in both themes, as a fixed color moment.
 
@@ -226,7 +226,7 @@ Density is generous and confident: large tracking-tight headlines, long line-hei
 **Key Characteristics:**
 - Rounded stage panels (24px mobile hero, 32px elsewhere) as the unit of "big moment"; three exist: hero, Nazario, Stack.
 - Ghost word behind an arched portrait; the arch is a 999px-topped cut-out with a vertical blue gradient. The ghost word is the translated role word (DESENVOLVEDOR, DEVELOPER, DESARROLLADOR).
-- Bento cards (`.card`, `.bcard`) on a 12-column grid with a photo slot, text cards and floating tilted chips.
+- Bento cards (`.card`, `.bcard`) on a 12-column grid with text cards, glass and paper cards, and floating tilted chips.
 - Two-theme semantic token file; only brand blues, mint, the feature blue and the cover gradients are theme-independent.
 - Tight grotesk: negative tracking scaled to size, weights 500-800 for display, 400-450 for reading.
 - Pill and circle language for every control; white floating pills; glass for numbers and floating chrome.
@@ -237,7 +237,7 @@ Density is generous and confident: large tracking-tight headlines, long line-hei
 A navy-and-electric-blue world with one cyan signal in dark; a cool gray-and-cobalt world with ink navy in light. Neutrals are tinted toward blue in both themes. Pure black and pure white are avoided except for the white pill, the light-theme card and the chips on glass.
 
 ### Primary
-- **Electric Arch Blue** (#0a4bff to #1f9bff): the arch gradient in dark (top to bottom). In light it becomes **Cobalt Arch** (#2f55ff to #9db0ff). The About photo card also washes a 32% mix of the arch top color up from its bottom edge.
+- **Electric Arch Blue** (#0a4bff to #1f9bff): the arch gradient in dark (top to bottom). In light it becomes **Cobalt Arch** (#2f55ff to #9db0ff).
 - **Cyan Signal** (#00e4f5): dark-theme accent for links, focus rings, hover text, active nav link and the circle on the primary button. Small marks only.
 - **Cobalt** (#0a3fe0): the light-theme accent, in the same roles. It is also the hover color of chips on the feature panel in both themes.
 - **Brand Blue / Brand Sky** (#004af5 / #0097f5): theme-independent; the brand mark tile and the default project cover.
@@ -297,7 +297,7 @@ A full-bleed page field with two widths: `--container` 1240px (plus gutter) for 
 
 Reading sections use a two-column split (1fr / 2.2fr): a small title on the left, content on the right, collapsing to one column at 860px.
 
-**Bento grids** use 12 columns with a `clamp(12px, 1.6vw, 16px)` gap. About: on mobile a 22rem photo card then the two text cards stacked; from 960px one row of three, the photo card in columns 1-4 and the text cards in 5-8 and 9-12. Stack (inside the feature panel): one column on mobile, two columns from 600px (language and architecture cards full width), and from 960px an asymmetric composition over three rows: language (1-5, two rows), data (6-9), cloud (10-12, two rows), architecture (6-9), then methodology (1-3), AI (4-8) and spoken languages (9-12). Nazario keeps its own layout: title and lead left with a logo slot right (from 860px; the slot stacks below at 16rem wide on smaller screens), then three glass fact cards in a row (stacked below 860px).
+**Bento grids** use 12 columns with a `clamp(12px, 1.6vw, 16px)` gap. About: two text cards, stacked on mobile and side by side from 960px (columns 1-6 and 7-12). Stack (inside the feature panel): one column on mobile, two columns from 600px (language and architecture cards full width), and from 960px an asymmetric composition over three rows: language (1-5, two rows), data (6-9), cloud (10-12, two rows), architecture (6-9), then methodology (1-3), AI (4-8) and spoken languages (9-12). Nazario keeps its own layout: title and lead left with a logo slot right (from 860px; the slot stacks below at 16rem wide on smaller screens), then three glass fact cards in a row (stacked below 860px).
 
 **Projects** are a grid of equal cards, no featured card: one column, two from 640px, three from 1100px.
 
@@ -321,7 +321,7 @@ Depth is mostly tonal and translucent, with shadows reserved for lift. Surfaces 
 
 Big, soft, and round, with one architectural gesture. Radii are a five-step scale: 10, 16, 24, 32 and pill (999). Stage panels and the desktop hero use 32px (24px on the mobile hero); every card, bento card, glass stat, logo slot, project card and nav sheet uses 24px; the brand tile uses 9px and the scrollbar thumb 8px. Controls are always pill or circle; the project badge and status dot are circles.
 
-The signature silhouette is the arch: a 999px top radius with a square base, bottom-anchored, fading out at its base through a mask. It recurs as a faint outline inside the Nazario stage panel (line color at 0.55 opacity, masked) and as a white outline tile inside every project cover. The portrait is cut out and slightly oversized inside the arch (122% wide, offset -11%) so the head breaks its edge. The About photo card is the same idea rotated to a card: a portrait bottom-anchored and faded into the card edge over a blue wash.
+The signature silhouette is the arch: a 999px top radius with a square base, bottom-anchored, fading out at its base through a mask. It recurs as a faint outline inside the Nazario stage panel (line color at 0.55 opacity, masked) and as a white outline tile inside every project cover. The portrait is cut out and slightly oversized inside the arch (122% wide, offset -11%) so the head breaks its edge.
 
 The orbit motif on the cloud card is two dashed concentric half-rings (1.5px, 4 6 dash, white at 38%) with three dark round nodes labeled Az, Git and GH.
 
@@ -364,12 +364,11 @@ Experience is a list with a hairline top border per row, a small meta column (da
 
 ### Cards (`.card`)
 The bento unit on the page field. 24px radius, 1px hairline, `--card` fill, padding clamp(20px, 2.4vw, 28px).
-- **Text card (`--wide`):** Title, secondary-ink text at 0.875rem (1rem when wide), optional floating chips underneath. Two in About, side by side next to the photo card.
-- **Photo card (`--photo`):** zero padding, portrait contained and bottom-anchored, masked to fade at the bottom edge, over a radial blue wash. When no image exists, a silhouette placeholder at 12% ink shows.
+- **Text card (`--wide`):** Title, secondary-ink text at 0.875rem (1rem when wide), optional floating chips underneath. Two in About, stacked on mobile and side by side from 960px.
 - **Glass card (`--glass`):** translucent glass fill, strong hairline, 14px blur. Used for the three Nazario facts on the stage panel.
 
 ### Image Slots
-A container marked `data-slot` holding an `img` that starts at `hidden` or fails to load. While there is no file it shows a placeholder (silhouette or dashed outline with an icon); once the file loads it gets `has-img` and the image covers the placeholder. Two exist: the About photo (`assets/img/about.png`) and the Nazario logo (`assets/img/nazario-logo.png`, dashed 5:4 slot, max 22rem, logo contained with 28px padding). No code change is needed when the file is added.
+A container marked `data-slot` holding an `img` that starts at `hidden` or fails to load. While the file is missing it shows a dashed outline with an icon; once the file loads it gets `has-img` and the image covers the placeholder. One exists: the Nazario logo (`assets/img/nazario-logo.png`, 5:4 slot, max 22rem, logo contained with 28px padding; currently filled with the green diamond logo). No code change is needed when the file is added.
 
 ### Stage Panel
 A 32px-radius panel with the stage gradient and generous padding (28-72px), clipped to hide the large arch outline. Used for the hero and the Nazario Sistemas block. Its inner elements sit on `--glass`.
@@ -390,7 +389,7 @@ Ease is `cubic-bezier(0.16, 1, 0.3, 1)` (ease-out) throughout; durations are 180
 - **Do** stage each peak moment as a rounded stage panel (`--radius-xl`, `--stage`) and keep the rest on the page field. The Stack feature panel is the one exception in color, not in shape.
 - **Do** define new colors as semantic tokens in `tokens.css` for both dark and light; a fixed-color surface (feature, paper, cover) carries its own ink.
 - **Do** set proof as a figure in Stat value type with a label in secondary ink.
-- **Do** compose cards as a bento: a 12-column grid, 12-16px gaps, one photo card anchoring the composition, text cards beside it.
+- **Do** compose cards as a bento: a 12-column grid, 12-16px gaps, text cards side by side.
 - **Do** make every action a pill (or circle) with the label-plus-attached-circle pattern for the primary call to action.
 - **Do** use hairline rows for chronological lists (experience).
 - **Do** give optional images a slot with a placeholder so the layout is finished before the file exists.

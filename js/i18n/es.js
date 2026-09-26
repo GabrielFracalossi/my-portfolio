@@ -17,7 +17,6 @@ window.I18N.es = {
   'a11y.themeToDark': 'Cambiar al tema oscuro',
   'a11y.portrait': 'Retrato de Gabriel Fracalossi',
   'a11y.newTab': '(se abre en una pestaña nueva)',
-  'a11y.aboutPhoto': "Foto de Gabriel Fracalossi",
   'a11y.nzLogo': "Logo de Nazario Sistemas",
 
   'nav.about': 'Sobre mí',

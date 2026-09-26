@@ -17,7 +17,6 @@ window.I18N.en = {
   'a11y.themeToDark': 'Switch to dark theme',
   'a11y.portrait': 'Portrait of Gabriel Fracalossi',
   'a11y.newTab': '(opens in a new tab)',
-  'a11y.aboutPhoto': "Photo of Gabriel Fracalossi",
   'a11y.nzLogo': "Nazario Sistemas logo",
 
   'nav.about': 'About',
