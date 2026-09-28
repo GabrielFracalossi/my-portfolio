@@ -281,4 +281,13 @@
     pointer-events: none;
     user-select: none;
   }
+  .bcard__mark-1 {
+    rotate: -90deg;
+    font-size: clamp(5rem, 13vw, 10rem);
+    right: -0.8em;
+    bottom: 0.5em;
+  }
+  .bcard__mark-2 {
+    font-size: clamp(5rem, 13vw, 8rem);
+  }
 }
