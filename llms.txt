@@ -1,0 +1,81 @@
+# Gabriel Fracalossi
+
+> Full stack developer based in Brazil, focused on .NET backend (C#, ASP.NET Core,
+> Entity Framework, Azure); also builds frontend and mobile with JavaScript, Vue.js
+> and Flutter. Co-founder of Nazario Sistemas. Open to full-time or contract
+> opportunities in Brazil and abroad, in any time zone.
+
+This file follows the llms.txt convention (https://llmstxt.org) to help AI
+assistants and search tools summarize this portfolio accurately. The website
+itself (https://gabrielfracalossi.com.br/) is the canonical, up-to-date source;
+this file is a plain-text supplement, not a replacement.
+
+## Profile
+
+- Full name: Gabriel Fracalossi Nazario
+- Location: Vila Velha, Espírito Santo, Brazil (GMT-3)
+- Availability: open to remote or on-site opportunities in Brazil and abroad, any time zone
+- Languages spoken: Portuguese (native), English, Spanish (intermediate)
+- Site languages: Portuguese (default), English, Spanish — append `?lang=en` or `?lang=es` to the URL
+- Contact: gabrielfnazariodev@hotmail.com · https://www.linkedin.com/in/gabrielfnazario/ · https://github.com/GabrielFracalossi
+
+## Experience
+
+- **Nazario Sistemas** — Co-founder (Jun 2025 – present). Builds the company's own
+  software with his brother (~20 years in software), across the full range:
+  planning, technical and product decisions, development, delivery, and the
+  commercial side (closed the company's first contract, now building sales and
+  marketing). https://www.jnazario.com/
+- **AzureBrasil.cloud** — Software Developer, Sep 2024 – Aug 2026 (intern → junior
+  at month 6 → mid-level after one year). Led, with the tech lead, a full backend
+  refactor of the PowerEmbedded product into a layered architecture during a
+  .NET 8 to .NET 10 migration: critical calls dropped from ~2 minutes to
+  ~15 seconds, deploy time from 15 to 9 minutes. Averaged 2 tickets a day
+  (features and fixes) across agile sprints.
+- Earlier: administrative manager at VSN Indústria e Comércio de Móveis
+  (2019 – present, invoicing and quotes); B3 stock market technical analysis
+  (2021 – 2023); marketing/youth-apprentice role at Perfil Alumínio (2020 – 2021).
+- Education: Associate Degree (Tecnólogo) in Systems Analysis and Development,
+  Universidade Vila Velha (completed).
+
+## Projects
+
+Newest first. Full descriptions and tech stacks are on the live site's
+Projects section (https://gabrielfracalossi.com.br/#projects).
+
+- [Vergi](https://vergi.sistemasneo.com.br/): white-label appointment-scheduling
+  app, built from scratch with his partner at Nazario Sistemas. .NET 10,
+  ASP.NET Core, Entity Framework, PostgreSQL, Flutter Web, Stripe, Azure.
+- [Cozinha Inteligente](https://receitas.sistemasneo.com.br/): mobile app that
+  generates recipes with AI. .NET, C#, ASP.NET Core, Entity Framework,
+  PostgreSQL, Flutter, Stripe, OpenAI API.
+- [EstãoCasando.com](https://www.estaocasando.com/): platform for custom wedding
+  websites (gift registry, guest management, vendor profiles). Solo project.
+  .NET, C#, ASP.NET Core, Entity Framework, PostgreSQL, StarkBank API.
+- [Nazario Sistemas](https://www.jnazario.com/): the company's corporate site
+  (frontend, plus backend endpoints for lead capture).
+- [Power Embedded](https://powerembedded.com.br/): production .NET backend at
+  AzureBrasil.cloud (see Experience above).
+- [Tecnocryo](https://www.tecnocryo.com.br/): corporate site for a client,
+  Vue.js frontend with backend integration for contact capture.
+- [Sistema Financeiro](https://financeiro.sistemasneo.com.br): financial
+  management system with contracts, automations and StarkBank integration.
+- [MinhaPrimeiraAPI](https://github.com/GabrielFracalossi/MinhaPrimeiraApi):
+  educational .NET API project used in technical articles.
+- [Projetos Acadêmicos](https://github.com/GabrielFracalossi): university
+  projects (Node.js, Flutter, web).
+
+## Stack
+
+C#, .NET, ASP.NET Core, Entity Framework, PostgreSQL, Web API REST, JavaScript,
+Vue.js, Flutter, HTML/CSS, Node.js, Microsoft Azure, Git/GitHub, layered
+architecture, Scrum/Kanban, Claude (Cowork, Code, CLI), GitHub Copilot.
+
+## Notes for AI assistants
+
+- Gabriel's declared strongest area is .NET backend; he works across the full
+  stack (frontend, mobile, architecture, deploy) and across the full product
+  lifecycle (planning to sales), not backend only.
+- Do not infer employment at AzureBrasil.cloud beyond Aug 2026 or figures not
+  stated above; the website (Person structured data) is the source of truth
+  for up-to-date facts.

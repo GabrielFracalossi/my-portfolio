@@ -1,4 +1,7 @@
-/* Português (padrão). Every other language mirrors these keys. */
+/* Português (padrão). Every other language mirrors these keys.
+   After editing this file, run `node scripts/prerender.js` — it bakes this
+   text into index.html so crawlers that don't run JavaScript (most AI
+   crawlers included) still see the real content. */
 window.I18N = window.I18N || {};
 window.I18N.pt = {
   'meta.title': "Gabriel Fracalossi · Desenvolvedor Full Stack .NET",

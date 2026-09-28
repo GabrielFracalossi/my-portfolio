@@ -103,46 +103,55 @@ window.PROJECTS = [
   }
 ];
 
-/* ── Renderer ─────────────────────────────────────────────── */
+/* ── Card template ────────────────────────────────────────────
+   Pure string builder, no DOM access — reused by the browser
+   renderer below and by scripts/prerender.js (Node), which bakes
+   the default-language markup into index.html so crawlers that
+   don't run JavaScript (most AI crawlers included) still see the
+   real project list. Run `node scripts/prerender.js` after editing
+   this file or js/i18n/pt.js. */
+window.buildProjectCard = function buildProjectCard(p) {
+  var arrow = '<svg class="icon icon--stroke" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>';
+  var tags = p.tags
+    .map(function (t) { return '<span class="tag" data-i18n="tag.' + t + '"></span>'; })
+    .join('');
+  var tech = p.tech.map(function (t) { return '<li>' + t + '</li>'; }).join('');
+
+  var mark = p.logo
+    ? '<img class="project__logo" src="' + p.logo + '" alt="" width="279" height="512" loading="lazy" decoding="async">'
+    : '<svg class="icon icon--stroke project__icon" aria-hidden="true"><use href="#' + p.icon + '"/></svg>';
+
+  return (
+    '<article class="project" id="project-' + p.id + '" data-reveal>' +
+      '<div class="project__thumb project__thumb--' + p.variant + '">' +
+        '<svg class="project__arches" viewBox="0 0 400 500" aria-hidden="true"><use href="#i-arches"/></svg>' +
+        '<span class="project__badge">' + mark + '</span>' +
+        '<div class="project__tags">' + tags + '</div>' +
+        '<span class="project__domain">' + p.domain + '</span>' +
+      '</div>' +
+      '<div class="project__body">' +
+        '<h3 class="project__name" id="project-' + p.id + '-name">' + p.name + '</h3>' +
+        '<p class="project__role" data-i18n="projects.' + p.id + '.role"></p>' +
+        '<p class="project__desc" data-i18n="projects.' + p.id + '.desc"></p>' +
+        '<ul class="project__tech">' + tech + '</ul>' +
+        '<a class="project__link" href="' + p.href + '" target="_blank" rel="noopener noreferrer" ' +
+          'id="project-' + p.id + '-link" aria-labelledby="project-' + p.id + '-name project-' + p.id + '-link">' +
+          '<span class="label" data-i18n="' + (p.github ? 'projects.github' : 'projects.visit') + '"></span>' +
+          arrow +
+          '<span class="sr-only" data-i18n="a11y.newTab"></span>' +
+        '</a>' +
+      '</div>' +
+    '</article>'
+  );
+};
+
+/* ── Renderer (browser only) ─────────────────────────────────── */
 (function renderProjects() {
+  if (typeof document === 'undefined') return; // required from Node (prerender script) — skip
   var grid = document.getElementById('projectsGrid');
   if (!grid || !window.PROJECTS) return;
 
-  var arrow = '<svg class="icon icon--stroke" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>';
-
-  grid.innerHTML = window.PROJECTS.map(function (p) {
-    var tags = p.tags
-      .map(function (t) { return '<span class="tag" data-i18n="tag.' + t + '"></span>'; })
-      .join('');
-    var tech = p.tech.map(function (t) { return '<li>' + t + '</li>'; }).join('');
-
-    var mark = p.logo
-      ? '<img class="project__logo" src="' + p.logo + '" alt="" width="279" height="512" loading="lazy" decoding="async">'
-      : '<svg class="icon icon--stroke project__icon" aria-hidden="true"><use href="#' + p.icon + '"/></svg>';
-
-    return (
-      '<article class="project" id="project-' + p.id + '" data-reveal>' +
-        '<div class="project__thumb project__thumb--' + p.variant + '">' +
-          '<svg class="project__arches" viewBox="0 0 400 500" aria-hidden="true"><use href="#i-arches"/></svg>' +
-          '<span class="project__badge">' + mark + '</span>' +
-          '<div class="project__tags">' + tags + '</div>' +
-          '<span class="project__domain">' + p.domain + '</span>' +
-        '</div>' +
-        '<div class="project__body">' +
-          '<h3 class="project__name" id="project-' + p.id + '-name">' + p.name + '</h3>' +
-          '<p class="project__role" data-i18n="projects.' + p.id + '.role"></p>' +
-          '<p class="project__desc" data-i18n="projects.' + p.id + '.desc"></p>' +
-          '<ul class="project__tech">' + tech + '</ul>' +
-          '<a class="project__link" href="' + p.href + '" target="_blank" rel="noopener noreferrer" ' +
-            'id="project-' + p.id + '-link" aria-labelledby="project-' + p.id + '-name project-' + p.id + '-link">' +
-            '<span class="label" data-i18n="' + (p.github ? 'projects.github' : 'projects.visit') + '"></span>' +
-            arrow +
-            '<span class="sr-only" data-i18n="a11y.newTab"></span>' +
-          '</a>' +
-        '</div>' +
-      '</article>'
-    );
-  }).join('');
+  grid.innerHTML = window.PROJECTS.map(window.buildProjectCard).join('');
 
   // Cards enter in staggered columns, never in one identical wave
   grid.querySelectorAll('.project').forEach(function (card, i) {
