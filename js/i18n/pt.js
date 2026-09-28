@@ -4,7 +4,7 @@
    crawlers included) still see the real content. */
 window.I18N = window.I18N || {};
 window.I18N.pt = {
-  'meta.title': "Gabriel Fracalossi · Desenvolvedor Full Stack .NET",
+  'meta.title': "Gabriel Fracalossi · Desenvolvedor Full Stack",
   'meta.description': "Desenvolvedor full stack com foco em .NET e sócio-fundador da Nazario Sistemas. Do planejamento ao deploy: APIs, integrações e aplicativos completos.",
 
   'a11y.skip': 'Pular para o conteúdo',

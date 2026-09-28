@@ -1,7 +1,7 @@
 /* Español */
 window.I18N = window.I18N || {};
 window.I18N.es = {
-  'meta.title': "Gabriel Fracalossi · Desarrollador Full Stack .NET",
+  'meta.title': "Gabriel Fracalossi · Desarrollador Full Stack",
   'meta.description': "Desarrollador full stack con foco en .NET y cofundador de Nazario Sistemas. Del planeamiento al despliegue: APIs, integraciones y aplicaciones completas.",
 
   'a11y.skip': 'Saltar al contenido',

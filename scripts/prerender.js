@@ -89,7 +89,27 @@ html = html.replace(/<[a-zA-Z0-9]+\b[^>]*\bdata-i18n-attr="([^"]+)"[^>]*>/g, fun
   return out;
 });
 
-// 4. Project list as structured data (schema.org ItemList/CreativeWork),
+// 4. Title and meta tags that aren't data-i18n elements (i18n.js updates
+//    these directly by selector at runtime, so they need their own pass
+//    here instead of being caught by pass 2).
+function syncText(re, key) {
+  if (!(key in dict)) { warnMissing(key); return; }
+  const value = escapeHtml(dict[key]);
+  if (!re.test(html)) { console.warn('prerender: tag not found for "' + key + '"'); return; }
+  html = html.replace(re, '$1' + value + '$2');
+}
+function syncAttr(re, key) {
+  if (!(key in dict)) { warnMissing(key); return; }
+  const value = escapeAttr(dict[key]);
+  if (!re.test(html)) { console.warn('prerender: tag not found for "' + key + '"'); return; }
+  html = html.replace(re, '$1' + value + '$2');
+}
+syncText(/(<title>)[^<]*(<\/title>)/, 'meta.title');
+syncAttr(/(<meta name="description" content=")[^"]*("\s*\/>)/, 'meta.description');
+syncAttr(/(<meta property="og:title" content=")[^"]*("\s*\/>)/, 'meta.title');
+syncAttr(/(<meta property="og:description" content=")[^"]*("\s*\/>)/, 'meta.description');
+
+// 5. Project list as structured data (schema.org ItemList/CreativeWork),
 //    regenerated from the same source of truth as the cards above.
 const itemList = {
   '@context': 'https://schema.org',
