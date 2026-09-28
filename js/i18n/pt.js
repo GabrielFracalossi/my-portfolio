@@ -2,7 +2,7 @@
 window.I18N = window.I18N || {};
 window.I18N.pt = {
   'meta.title': "Gabriel Fracalossi · Desenvolvedor Full Stack .NET",
-  'meta.description': "Desenvolvedor full stack com foco em backend .NET e sócio-fundador da Nazario Sistemas. Do planejamento ao deploy: APIs, integrações e aplicativos completos.",
+  'meta.description': "Desenvolvedor full stack com foco em .NET e sócio-fundador da Nazario Sistemas. Do planejamento ao deploy: APIs, integrações e aplicativos completos.",
 
   'a11y.skip': 'Pular para o conteúdo',
   'a11y.brand': 'Gabriel Fracalossi, início',
@@ -27,7 +27,7 @@ window.I18N.pt = {
 
   'hero.hello': 'Olá, eu sou o Gabriel.',
   'hero.title': "Software completo, do planejamento ao deploy",
-  'hero.lead': "Desenvolvedor full stack com 2 anos de C# e .NET e foco em backend, sócio-fundador da Nazario Sistemas e aberto a oportunidades no Brasil e no exterior, em qualquer fuso horário.",
+  'hero.lead': "Desenvolvedor full stack com 2 anos de C# e .NET, sócio-fundador da Nazario Sistemas e aberto a oportunidades no Brasil e no exterior, em qualquer fuso horário.",
   'hero.ctaPrimary': 'Fale comigo',
   'hero.ctaSecondary': 'Ver projetos',
   'hero.status': "Aberto a oportunidades no Brasil e no exterior",
@@ -39,8 +39,8 @@ window.I18N.pt = {
 
   'about.title': 'Sobre mim',
   'about.statement': "Cuido de um produto de ponta a ponta, do planejamento ao deploy e à venda, com o backend em .NET como meu ponto mais forte.",
-  'about.p1': "Comecei como estagiário e cheguei ao nível pleno em dois anos. No backend, trabalho com C#, ASP.NET Core e Entity Framework. Também construo interfaces web e mobile com JavaScript, Vue.js e Flutter, e cuido de arquitetura em camadas, versionamento com Git e GitHub, deploy e infraestrutura no Azure.",
-  'about.p2': "Como sócio-fundador da Nazario Sistemas, desenvolvo software ao lado do meu irmão e participo de todas as etapas: planejamento, definições técnicas e de produto, desenvolvimento, entrega e também a parte comercial, do primeiro contrato à prospecção de clientes. Meu foco continua sendo o backend.",
+  'about.p1': "Comecei como estagiário e cheguei ao nível pleno em dois anos. Já passei por praticamente todas as camadas de um produto: interfaces web e mobile com JavaScript, Vue.js e Flutter, APIs em C#, ASP.NET Core e Entity Framework, arquitetura em camadas, versionamento com Git e GitHub, deploy e infraestrutura no Azure.",
+  'about.p2': "Como sócio-fundador da Nazario Sistemas, desenvolvo software ao lado do meu irmão e participo de todas as etapas: planejamento, definições técnicas e de produto, desenvolvimento, entrega e também a parte comercial, do primeiro contrato à prospecção de clientes.",
   'about.chip.layered': 'Arquitetura em camadas',
   'about.chip.integrations': 'Integração de APIs',
   'about.card1.title': "Do banco de dados à interface",

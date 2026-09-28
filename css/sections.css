@@ -378,7 +378,7 @@
 .nz__cta { margin-top: clamp(1.75rem, 3vw, 2.5rem); }
 .nz__logo {
   justify-self: end;
-  width: min(100%, 22rem);
+  width: min(100%);
   aspect-ratio: 5 / 4;
 }
 .nz__facts {
@@ -389,7 +389,7 @@
 }
 @media (max-width: 860px) {
   .nz__top { grid-template-columns: minmax(0, 1fr); }
-  .nz__logo { justify-self: start; width: min(100%, 16rem); }
+  .nz__logo { justify-self: start; width: min(100%); }
   .nz__facts { grid-template-columns: minmax(0, 1fr); }
 }
 

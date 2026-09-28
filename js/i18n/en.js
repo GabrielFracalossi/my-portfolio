@@ -2,7 +2,7 @@
 window.I18N = window.I18N || {};
 window.I18N.en = {
   'meta.title': "Gabriel Fracalossi · .NET Full Stack Developer",
-  'meta.description': "Full stack developer focused on .NET backend and co-founder of Nazario Sistemas. From planning to deploy: APIs, integrations and complete applications.",
+  'meta.description': "Full stack developer focused on .NET and co-founder of Nazario Sistemas. From planning to deploy: APIs, integrations and complete applications.",
 
   'a11y.skip': 'Skip to content',
   'a11y.brand': 'Gabriel Fracalossi, home',
@@ -27,7 +27,7 @@ window.I18N.en = {
 
   'hero.hello': "Hi, I'm Gabriel.",
   'hero.title': "Complete software, from planning to deploy",
-  'hero.lead': "Full stack developer with 2 years of C# and .NET and a backend focus, co-founder of Nazario Sistemas and open to opportunities in Brazil and abroad, in any time zone.",
+  'hero.lead': "Full stack developer with 2 years of C# and .NET, co-founder of Nazario Sistemas and open to opportunities in Brazil and abroad, in any time zone.",
   'hero.ctaPrimary': 'Get in touch',
   'hero.ctaSecondary': 'View projects',
   'hero.status': "Open to opportunities in Brazil and abroad",
@@ -39,8 +39,8 @@ window.I18N.en = {
 
   'about.title': 'About me',
   'about.statement': "I take a product end to end, from planning to deploy and sales, with .NET backend as my strongest ground.",
-  'about.p1': "I started as an intern and reached mid-level in two years. On the backend I work with C#, ASP.NET Core and Entity Framework. I also build web and mobile interfaces with JavaScript, Vue.js and Flutter, and handle layered architecture, version control with Git and GitHub, deploys and infrastructure on Azure.",
-  'about.p2': "As co-founder of Nazario Sistemas, I build software alongside my brother and take part in every stage: planning, technical and product decisions, development, delivery and the commercial side too, from the first contract to client prospecting. My focus remains the backend.",
+  'about.p1': "I started as an intern and reached mid-level in two years. I've touched practically every layer of a product: web and mobile interfaces with JavaScript, Vue.js and Flutter, APIs in C#, ASP.NET Core and Entity Framework, layered architecture, version control with Git and GitHub, deploys and infrastructure on Azure.",
+  'about.p2': "As co-founder of Nazario Sistemas, I build software alongside my brother and take part in every stage: planning, technical and product decisions, development, delivery and the commercial side too, from the first contract to client prospecting.",
   'about.chip.layered': 'Layered architecture',
   'about.chip.integrations': 'API integration',
   'about.card1.title': "From database to interface",
