@@ -39,7 +39,7 @@ window.I18N.en = {
 
   'about.title': 'About me',
   'about.statement': "I take a product end to end, from planning to deploy and sales, with .NET backend as my strongest ground.",
-  'about.p1': "I started as an intern and reached mid-level in two years. I've touched practically every layer of a product: web and mobile interfaces with JavaScript, Vue.js and Flutter, APIs in C#, ASP.NET Core and Entity Framework, layered architecture, version control with Git and GitHub, deploys and infrastructure on Azure.",
+  'about.p1': "I started as an intern and reached mid-level in two years. I've touched practically every layer of a product: web and mobile interfaces with JavaScript, Vue.js and Flutter, APIs in C#, ASP.NET Core MVC and Entity Framework with PostgreSQL, layered architecture, version control with Git and GitHub, delivery with Azure DevOps and infrastructure on Azure.",
   'about.p2': "As co-founder of Nazario Sistemas, I build software alongside my brother and take part in every stage: planning, technical and product decisions, development, delivery and the commercial side too, from the first contract to client prospecting.",
   'about.chip.layered': 'Layered architecture',
   'about.chip.integrations': 'API integration',
@@ -55,9 +55,12 @@ window.I18N.en = {
     'Full backend refactor of the PowerEmbedded product with the tech lead, during the .NET 8 to .NET 10 migration. The project moved to a layered architecture: critical calls dropped from ~2 minutes to ~15 seconds and deploys from 15 to 9 minutes.',
   'exp.azure.b2':
     'Dozens of features and fixes delivered across agile sprints, averaging 2 tickets a day from kickoff to QA handoff.',
+  'exp.azure.b0': 'Built and maintained Web APIs in C# and ASP.NET Core MVC for PowerEmbedded, with Entity Framework and PostgreSQL on the data layer and Azure DevOps across delivery.',
+  'exp.azure.stack': 'Stack: C#, ASP.NET Core MVC, Entity Framework, PostgreSQL, Azure DevOps',
+  'exp.nz.stack': 'Stack: C#, ASP.NET Core, PostgreSQL, Entity Framework, Python, Vue.js, Flutter, Node.js',
   'exp.nz.date': 'Jun 2025 – Present',
   'exp.nz.role': 'Co-founder',
-  'exp.nz.b1': "Building the company's systems from backend to interface, carrying out technical and product decisions in partnership with my brother, who has almost 20 years of experience in software.",
+  'exp.nz.b1': "Building the company's own products: back end in C#/ASP.NET Core with PostgreSQL and Entity Framework or Python, and front ends in Vue.js, Flutter and Node.js. I execute the technical and product decisions in partnership with my brother, who has almost 20 years of experience in software.",
   'exp.nz.b2': "Led the company's first commercial contract, including the final legal steps with the client.",
   'exp.nz.b3':
     'Since August 2026, building out the sales and marketing side: industry events (MLS Festival) and client prospecting.',
@@ -149,8 +152,8 @@ window.I18N.en = {
   'stack.item.migration': 'Version migration (.NET 8 → .NET 10)',
   'stack.item.agents': 'Agents',
   'stack.item.pt': 'Portuguese (native)',
-  'stack.item.en': 'English (intermediate)',
-  'stack.item.es': 'Spanish (intermediate)',
+  'stack.item.en': 'English (B1)',
+  'stack.item.es': 'Spanish (A2)',
 
   'contact.title': "Let's talk.",
   'contact.lead': "I'm open to .NET and full stack development opportunities in Brazil or abroad, and to conversations about projects with Nazario Sistemas. Reach out through whichever channel you prefer.",

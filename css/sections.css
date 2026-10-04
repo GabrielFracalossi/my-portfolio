@@ -328,6 +328,7 @@
   height: 1px;
   background: var(--ink-3);
 }
+.tl-stack { margin-top: 0.9rem; font-size: var(--fs-xs); letter-spacing: 0.01em; color: var(--ink-3); }
 .tl-item--minor { padding-block: clamp(1.1rem, 2vw, 1.6rem); }
 .tl-item--minor .tl-role { font-size: var(--fs-md); }
 .tl-item--minor .tl-list { margin-top: 0.5rem; }

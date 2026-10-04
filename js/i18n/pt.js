@@ -42,7 +42,7 @@ window.I18N.pt = {
 
   'about.title': 'Sobre mim',
   'about.statement': "Cuido de um produto de ponta a ponta, do planejamento ao deploy e à venda, com o backend em .NET como meu ponto mais forte.",
-  'about.p1': "Comecei como estagiário e cheguei ao nível pleno em dois anos. Já passei por praticamente todas as camadas de um produto: interfaces web e mobile com JavaScript, Vue.js e Flutter, APIs em C#, ASP.NET Core e Entity Framework, arquitetura em camadas, versionamento com Git e GitHub, deploy e infraestrutura no Azure.",
+  'about.p1': "Comecei como estagiário e cheguei ao nível pleno em dois anos. Já passei por praticamente todas as camadas de um produto: interfaces web e mobile com JavaScript, Vue.js e Flutter, APIs em C#, ASP.NET Core MVC e Entity Framework com PostgreSQL, arquitetura em camadas, versionamento com Git e GitHub, entrega com Azure DevOps e infraestrutura no Azure.",
   'about.p2': "Como sócio-fundador da Nazario Sistemas, desenvolvo software ao lado do meu irmão e participo de todas as etapas: planejamento, definições técnicas e de produto, desenvolvimento, entrega e também a parte comercial, do primeiro contrato à prospecção de clientes.",
   'about.chip.layered': 'Arquitetura em camadas',
   'about.chip.integrations': 'Integração de APIs',
@@ -58,9 +58,12 @@ window.I18N.pt = {
     'Refatoração completa do backend do PowerEmbedded ao lado do tech lead, durante a migração de .NET 8 para .NET 10. O projeto passou a uma arquitetura em camadas: chamadas críticas caíram de ~2 minutos para ~15 segundos e o deploy, de 15 para 9 minutos.',
   'exp.azure.b2':
     'Dezenas de funcionalidades e correções entregues em sprints ágeis, com média de 2 tickets por dia, do início do desenvolvimento até a validação do QA.',
+  'exp.azure.b0': 'Desenvolvimento e manutenção de Web APIs em C# e ASP.NET Core MVC no PowerEmbedded, com Entity Framework e PostgreSQL na camada de dados e Azure DevOps no fluxo de entrega.',
+  'exp.azure.stack': 'Stack: C#, ASP.NET Core MVC, Entity Framework, PostgreSQL, Azure DevOps',
+  'exp.nz.stack': 'Stack: C#, ASP.NET Core, PostgreSQL, Entity Framework, Python, Vue.js, Flutter, Node.js',
   'exp.nz.date': 'Jun 2025 – Atual',
   'exp.nz.role': 'Sócio-fundador',
-  'exp.nz.b1': "Desenvolvimento dos sistemas da empresa, do backend à interface, executando as definições técnicas e de produto em sociedade com meu irmão, que trabalha com software há quase 20 anos.",
+  'exp.nz.b1': 'Desenvolvimento dos produtos próprios da empresa: back end em C#/ASP.NET Core com PostgreSQL e Entity Framework ou Python, e frentes em Vue.js, Flutter e Node.js. Executo as definições técnicas e de produto em parceria com meu irmão, que trabalha com software há quase 20 anos.',
   'exp.nz.b2': 'Condução do primeiro contrato comercial, incluindo as etapas jurídicas finais com o cliente.',
   'exp.nz.b3':
     'Desde agosto de 2026, estruturação da frente comercial e de marketing: eventos do setor (MLS Festival) e prospecção de clientes.',
@@ -152,8 +155,8 @@ window.I18N.pt = {
   'stack.item.migration': 'Migração de versões (.NET 8 → .NET 10)',
   'stack.item.agents': 'Agentes',
   'stack.item.pt': 'Português (nativo)',
-  'stack.item.en': 'Inglês (intermediário)',
-  'stack.item.es': 'Espanhol (intermediário)',
+  'stack.item.en': 'Inglês (B1)',
+  'stack.item.es': 'Espanhol (A2)',
 
   'contact.title': 'Vamos conversar?',
   'contact.lead': "Estou aberto a oportunidades em desenvolvimento .NET e full stack, no Brasil ou no exterior, e a conversas sobre projetos com a Nazario Sistemas. Escreva pelo canal que preferir.",

@@ -15,7 +15,7 @@ this file is a plain-text supplement, not a replacement.
 - Full name: Gabriel Fracalossi Nazario
 - Location: Vila Velha, Espírito Santo, Brazil (GMT-3)
 - Availability: open to remote or on-site opportunities in Brazil and abroad, any time zone
-- Languages spoken: Portuguese (native), English, Spanish (intermediate)
+- Languages spoken: Portuguese (native), English (B1), Spanish (A2)
 - Site languages: Portuguese (default), English, Spanish — append `?lang=en` or `?lang=es` to the URL
 - Contact: gabrielfnazariodev@hotmail.com · https://www.linkedin.com/in/gabrielfnazario/ · https://github.com/GabrielFracalossi
 
@@ -67,8 +67,8 @@ Projects section (https://gabrielfracalossi.com.br/#projects).
 
 ## Stack
 
-C#, .NET, ASP.NET Core, Entity Framework, PostgreSQL, Web API REST, JavaScript,
-Vue.js, Flutter, HTML/CSS, Node.js, Microsoft Azure, Git/GitHub, layered
+C#, .NET, ASP.NET Core MVC, Entity Framework, PostgreSQL, Web API REST, Python, JavaScript,
+Vue.js, Flutter, HTML/CSS, Node.js, Microsoft Azure, Azure DevOps, Git/GitHub, layered
 architecture, Scrum/Kanban, Claude (Cowork, Code, CLI), GitHub Copilot.
 
 ## Notes for AI assistants
