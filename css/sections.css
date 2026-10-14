@@ -511,6 +511,10 @@
 .project__link:hover { gap: 0.8rem; color: var(--accent); }
 /* The whole card is clickable through this link */
 .project__link::after { content: ''; position: absolute; inset: 0; }
+.project__link--soon { color: var(--ink-3); }
+.project__link--soon .label { border-bottom-color: var(--line); }
+.project__link--soon:hover { gap: 0.5rem; color: var(--ink-3); }
+.project__link--soon::after { content: none; }
 
 /* ─── STACK (feature panel + bento) ────────────────────────── */
 #stack { padding-top: 0; }

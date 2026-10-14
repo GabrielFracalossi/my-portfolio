@@ -4,11 +4,43 @@
    `projects.<id>.role` and `projects.<id>.desc`.
 
    Cover of each card = gradient tile + icon badge:
+     href:    omit or set null when there is nothing to link yet (renders a
+              "coming soon" label instead of a link).
      icon:    id of a symbol in the sprite at the top of index.html (i-p-*)
      logo:    (optional) path to a logo image; wins over `icon`. Not used by default.
      variant: gradient of the tile (a–e, v) — see css/sections.css
    ───────────────────────────────────────────────────────────── */
 window.PROJECTS = [
+  {
+    id: 'nossoappescolar',
+    name: 'Nosso App Escolar',
+    icon: 'i-p-globe',
+    variant: 'a',
+    domain: 'red-coast-011b17910.5.azurestaticapps.net',
+    href: 'https://red-coast-011b17910.5.azurestaticapps.net/',
+    tags: ['frontend'],
+    tech: ['HTML', 'CSS']
+  },
+  {
+    id: 'cizyo',
+    name: 'CIZYO',
+    icon: 'i-p-chat',
+    variant: 'd',
+    domain: 'www.cizyo.com.br',
+    href: 'https://www.cizyo.com.br/',
+    tags: ['fullstack', 'integrations'],
+    tech: ['Python', 'Vue.js', 'Pagar.me']
+  },
+  {
+    id: 'escalainteligente',
+    name: 'Escala Inteligente',
+    icon: 'i-p-clock',
+    variant: 'e',
+    domain: '',
+    href: null,
+    tags: ['backend', 'mobile', 'integrations'],
+    tech: ['Flutter', 'Base44', 'APIs REST']
+  },
   {
     id: 'vergi',
     name: 'Vergi',
@@ -117,6 +149,15 @@ window.buildProjectCard = function buildProjectCard(p) {
     .join('');
   var tech = p.tech.map(function (t) { return '<li>' + t + '</li>'; }).join('');
 
+  var linkHtml = p.href
+    ? '<a class="project__link" href="' + p.href + '" target="_blank" rel="noopener noreferrer" ' +
+        'id="project-' + p.id + '-link" aria-labelledby="project-' + p.id + '-name project-' + p.id + '-link">' +
+        '<span class="label" data-i18n="' + (p.github ? 'projects.github' : 'projects.visit') + '"></span>' +
+        arrow +
+        '<span class="sr-only" data-i18n="a11y.newTab"></span>' +
+      '</a>'
+    : '<span class="project__link project__link--soon"><span class="label" data-i18n="projects.comingSoon"></span></span>';
+
   var mark = p.logo
     ? '<img class="project__logo" src="' + p.logo + '" alt="" width="279" height="512" loading="lazy" decoding="async">'
     : '<svg class="icon icon--stroke project__icon" aria-hidden="true"><use href="#' + p.icon + '"/></svg>';
@@ -134,12 +175,7 @@ window.buildProjectCard = function buildProjectCard(p) {
         '<p class="project__role" data-i18n="projects.' + p.id + '.role"></p>' +
         '<p class="project__desc" data-i18n="projects.' + p.id + '.desc"></p>' +
         '<ul class="project__tech">' + tech + '</ul>' +
-        '<a class="project__link" href="' + p.href + '" target="_blank" rel="noopener noreferrer" ' +
-          'id="project-' + p.id + '-link" aria-labelledby="project-' + p.id + '-name project-' + p.id + '-link">' +
-          '<span class="label" data-i18n="' + (p.github ? 'projects.github' : 'projects.visit') + '"></span>' +
-          arrow +
-          '<span class="sr-only" data-i18n="a11y.newTab"></span>' +
-        '</a>' +
+        linkHtml +
       '</div>' +
     '</article>'
   );

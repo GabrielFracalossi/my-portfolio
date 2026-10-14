@@ -109,9 +109,16 @@ window.I18N.en = {
   'tag.didactic': 'Educational',
   'tag.academic': 'Academic',
 
+  'projects.comingSoon': 'Coming soon',
+  'projects.nossoappescolar.role': 'Frontend Developer · Nazario Sistemas',
+  'projects.nossoappescolar.desc': 'Corporate site presenting Nosso App Escolar, a new Nazario Sistemas product still in the planning phase. I built the site, in plain HTML; my brother built a functional mockup of the app to test layout and basic features.',
+  'projects.cizyo.role': 'Full Stack Developer · Nazario Sistemas',
+  'projects.cizyo.desc': "Marketplace for paid mentoring sessions: users find advisors on any topic — from business to sales — and pay for a 1:1 session. I'm responsible for the platform's full development, back and front, the Pagar.me payment gateway integration, and automated tests. Currently in MVP, with a Python backend (planned migration to .NET) and a Vue.js front end; my brother handles the architecture planning.",
+  'projects.escalainteligente.role': 'Backend Developer · Nazario Sistemas',
+  'projects.escalainteligente.desc': 'Work-shift management app (4x4, 12x36 and other rotations) with built-in AI, which already existed as a Base44 web app. In partnership with Nazario Sistemas, I connected that existing backend to the mobile app, built in Flutter by my brother on Nowa App Dev.',
   'projects.vergi.role': 'Full Stack Developer · Nazario Sistemas',
   'projects.vergi.desc': "White-label scheduling app, built from scratch with my partner at Nazario Sistemas. Each business gets a public page with its own branding, and customers find open slots and book in a few taps. Includes a management dashboard, Stripe subscriptions, e-mail and push reminders, and an interface in three languages.",
-  'projects.cozinha.role': 'Full Stack Developer',
+  'projects.cozinha.role': 'Full Stack Developer · Nazario Sistemas',
   'projects.cozinha.desc':
     'Mobile app that generates practical recipes with AI, with ingredient tracking, history and favorites, and payments integrated with Stripe. Built from scratch: backend, app, data modeling and architecture.',
   'projects.estaocasando.role': 'Full Stack Developer · Solo project',

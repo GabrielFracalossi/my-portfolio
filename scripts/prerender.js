@@ -122,7 +122,7 @@ const itemList = {
       item: {
         '@type': p.github ? 'SoftwareSourceCode' : 'CreativeWork',
         name: p.name,
-        url: p.href,
+        url: p.href || undefined, // omit rather than ship "url": null for unpublished projects
         description: dict['projects.' + p.id + '.desc'] || '',
         keywords: p.tech.join(', '),
         creator: { '@id': 'https://gabrielfracalossi.com.br/#person' }

@@ -112,9 +112,16 @@ window.I18N.pt = {
   'tag.didactic': 'Didático',
   'tag.academic': 'Acadêmico',
 
+  'projects.comingSoon': 'Em breve',
+  'projects.nossoappescolar.role': 'Frontend Developer · Nazario Sistemas',
+  'projects.nossoappescolar.desc': 'Site institucional que apresenta o Nosso App Escolar, novo produto da Nazario Sistemas ainda em fase de planejamento. Fiz o site, em HTML puro; meu irmão construiu um mockup funcional do app para testar layout e funcionalidades básicas.',
+  'projects.cizyo.role': 'Full Stack Developer · Nazario Sistemas',
+  'projects.cizyo.desc': 'Marketplace de mentorias pagas: o usuário encontra conselheiros sobre qualquer assunto — de negócios a vendas — e paga por uma sessão 1:1. Sou responsável por todo o desenvolvimento da plataforma, back e front, pela integração do Pagar.me como gateway de pagamento e pelos testes automatizados. Em fase de MVP, com back em Python (migração para .NET planejada) e front em Vue.js; meu irmão cuida do planejamento da arquitetura.',
+  'projects.escalainteligente.role': 'Backend Developer · Nazario Sistemas',
+  'projects.escalainteligente.desc': 'App de gerenciamento de escalas de trabalho (4x4, 12x36 e outras) com IA integrada, que já existia como aplicação web no Base44. Em parceria com a Nazario Sistemas, conectei esse backend existente ao app mobile, construído em Flutter pelo meu irmão no Nowa App Dev.',
   'projects.vergi.role': 'Full Stack Developer · Nazario Sistemas',
   'projects.vergi.desc': "App de agendamentos white-label, criado do zero ao lado do meu sócio na Nazario Sistemas. Cada empresa ganha uma página pública com a própria marca, e os clientes encontram horários livres e agendam em poucos toques. Inclui painel de gestão, assinatura via Stripe, lembretes por e-mail e push, e interface em três idiomas.",
-  'projects.cozinha.role': 'Full Stack Developer',
+  'projects.cozinha.role': 'Full Stack Developer · Nazario Sistemas',
   'projects.cozinha.desc':
     'App mobile que gera receitas práticas com IA, com cadastro de ingredientes, histórico e favoritos e pagamentos integrados ao Stripe. Construído do zero: backend, app, modelagem de dados e arquitetura.',
   'projects.estaocasando.role': 'Full Stack Developer · Projeto solo',

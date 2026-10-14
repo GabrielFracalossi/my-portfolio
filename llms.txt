@@ -43,6 +43,15 @@ this file is a plain-text supplement, not a replacement.
 Newest first. Full descriptions and tech stacks are on the live site's
 Projects section (https://gabrielfracalossi.com.br/#projects).
 
+- [Nosso App Escolar](https://red-coast-011b17910.5.azurestaticapps.net/): corporate
+  site for a new Nazario Sistemas product, still in planning. Plain HTML.
+- [CIZYO](https://www.cizyo.com.br/): marketplace for paid 1:1 advisory
+  sessions on any topic. Full stack development, Pagar.me integration,
+  automated tests. MVP phase: Python backend (planned migration to .NET),
+  Vue.js frontend.
+- [Escala Inteligente](https://gabrielfracalossi.com.br/#projects): AI-assisted
+  work-shift scheduling app (4x4, 12x36...). Connected the existing Base44
+  backend to a new Flutter mobile app (Nowa App Dev). Not published yet.
 - [Vergi](https://vergi.sistemasneo.com.br/): white-label appointment-scheduling
   app, built from scratch with his partner at Nazario Sistemas. .NET 10,
   ASP.NET Core, Entity Framework, PostgreSQL, Flutter Web, Stripe, Azure.
