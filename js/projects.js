@@ -14,7 +14,7 @@ window.PROJECTS = [
   {
     id: 'nossoappescolar',
     name: 'Nosso App Escolar',
-    icon: 'i-p-globe',
+    icon: 'i-p-book',
     variant: 'a',
     domain: 'red-coast-011b17910.5.azurestaticapps.net',
     href: 'https://red-coast-011b17910.5.azurestaticapps.net/',
@@ -24,7 +24,7 @@ window.PROJECTS = [
   {
     id: 'cizyo',
     name: 'CIZYO',
-    icon: 'i-p-chat',
+    icon: 'i-p-people',
     variant: 'd',
     domain: 'www.cizyo.com.br',
     href: 'https://www.cizyo.com.br/',

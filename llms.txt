@@ -47,11 +47,10 @@ Projects section (https://gabrielfracalossi.com.br/#projects).
   site for a new Nazario Sistemas product, still in planning. Plain HTML.
 - [CIZYO](https://www.cizyo.com.br/): marketplace for paid 1:1 advisory
   sessions on any topic. Full stack development, Pagar.me integration,
-  automated tests. MVP phase: Python backend (planned migration to .NET),
-  Vue.js frontend.
+  automated tests.
 - [Escala Inteligente](https://gabrielfracalossi.com.br/#projects): AI-assisted
   work-shift scheduling app (4x4, 12x36...). Connected the existing Base44
-  backend to a new Flutter mobile app (Nowa App Dev). Not published yet.
+  backend to a new mobile app. Not published yet.
 - [Vergi](https://vergi.sistemasneo.com.br/): white-label appointment-scheduling
   app, built from scratch with his partner at Nazario Sistemas. .NET 10,
   ASP.NET Core, Entity Framework, PostgreSQL, Flutter Web, Stripe, Azure.
