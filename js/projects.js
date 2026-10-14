@@ -19,7 +19,7 @@ window.PROJECTS = [
     domain: 'red-coast-011b17910.5.azurestaticapps.net',
     href: 'https://red-coast-011b17910.5.azurestaticapps.net/',
     tags: ['frontend'],
-    tech: ['HTML', 'CSS']
+    tech: ['HTML', 'CSS', 'JavaScript']
   },
   {
     id: 'cizyo',
@@ -29,7 +29,7 @@ window.PROJECTS = [
     domain: 'www.cizyo.com.br',
     href: 'https://www.cizyo.com.br/',
     tags: ['fullstack', 'integrations'],
-    tech: ['Python', 'Vue.js', 'Pagar.me']
+    tech: ['Python', 'Vue.js', 'PostgreSQL', 'Azure', 'Pagar.me API']
   },
   {
     id: 'escalainteligente',
@@ -39,7 +39,7 @@ window.PROJECTS = [
     domain: '',
     href: null,
     tags: ['backend', 'mobile', 'integrations'],
-    tech: ['Flutter', 'Base44', 'APIs REST']
+    tech: ['Flutter', 'Base44', 'APIs REST', 'JSON']
   },
   {
     id: 'vergi',
