@@ -16,8 +16,8 @@ window.PROJECTS = [
     name: 'Nosso App Escolar',
     icon: 'i-p-book',
     variant: 'a',
-    domain: 'red-coast-011b17910.5.azurestaticapps.net',
-    href: 'https://red-coast-011b17910.5.azurestaticapps.net/',
+    domain: 'www.nossoappescolar.com.br',
+    href: 'https://www.nossoappescolar.com.br/',
     tags: ['frontend'],
     tech: ['HTML', 'CSS', 'JavaScript']
   },
