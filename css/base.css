@@ -60,9 +60,6 @@ html { scrollbar-width: thin; scrollbar-color: var(--scroll-thumb) transparent; 
   padding-inline: var(--gutter);
 }
 
-/* Full-bleed band: panels that run almost edge to edge (hero, Nazario, Stack) */
-.bleed { padding-inline: 12px; }
-
 .sr-only {
   position: absolute;
   width: 1px; height: 1px;
@@ -118,22 +115,8 @@ html { scrollbar-width: thin; scrollbar-color: var(--scroll-thumb) transparent; 
 .js [data-highlight] .gf-hw { color: color-mix(in srgb, var(--ink) 22%, transparent); }
 .js [data-highlight] .gf-hw.is-lit { color: var(--ink); }
 
-/* Spotlight that follows the pointer inside a surface */
-[data-glow] { position: relative; isolation: isolate; }
-[data-glow]::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  border-radius: inherit;
-  background: radial-gradient(480px circle at var(--mx, 50%) var(--my, 50%), var(--spot), transparent 65%);
-  opacity: 0;
-  transition: opacity 500ms var(--ease-out);
-  pointer-events: none;
-}
-[data-glow]:hover::before { opacity: 1; }
-
-/* Page-wide glow that trails the cursor, behind the content */
+/* Glow that trails the cursor on the page background only: every surface
+   above it is opaque, so cards and panels stay unlit and read as raised */
 .cursor-glow {
   position: fixed;
   top: 0;
@@ -151,9 +134,6 @@ html { scrollbar-width: thin; scrollbar-color: var(--scroll-thumb) transparent; 
 }
 .cursor-glow.is-on { opacity: 1; }
 main, .footer { position: relative; z-index: 1; }
-
-/* Magnetic buttons move with the individual translate property, so hover transforms still apply */
-[data-magnetic] { transition: transform var(--dur-base) var(--ease-out), translate 500ms var(--ease-out); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

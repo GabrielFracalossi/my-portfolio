@@ -7,8 +7,6 @@
      [data-split]      heading whose words rise in when it enters
      [data-highlight]  statement whose words light up with the scroll
      [data-clip]       panel that opens out to full width as it enters
-     [data-glow]       surface with a spotlight under the pointer
-     [data-magnetic]   button that leans toward the pointer
      [data-tl]         Trajetória: pinned horizontal story on wide screens,
                        vertical spine that fills with the scroll elsewhere
    ───────────────────────────────────────────────────────────── */
@@ -16,7 +14,6 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   var root = document.documentElement;
-  var nav = document.getElementById('navbar');
 
   function clamp(v, a, b) { return Math.min(b, Math.max(a, v)); }
 
@@ -133,7 +130,7 @@
   }
   onScroll(paintHero);
 
-  /* ── Pointer: page glow, hero depth, spotlights, magnetic buttons ── */
+  /* ── Pointer: glow on the page background only (surfaces stay unlit, for depth) and hero depth ── */
   if (canHover && !reduce) {
     var glow = document.createElement('div');
     glow.className = 'cursor-glow';
@@ -167,62 +164,12 @@
       if (still) moving = false; else requestAnimationFrame(follow);
     }
 
-    // spotlight position inside each [data-glow] surface (delegated, so re-rendered cards work too)
-    document.addEventListener('pointermove', function (e) {
-      var el = e.target.closest && e.target.closest('[data-glow]');
-      if (!el) return;
-      var r = el.getBoundingClientRect();
-      el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-      el.style.setProperty('--my', (e.clientY - r.top) + 'px');
-    }, { passive: true });
-
-    document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-      btn.addEventListener('pointermove', function (e) {
-        var r = btn.getBoundingClientRect();
-        btn.style.translate = ((e.clientX - r.left - r.width / 2) * 0.25).toFixed(1) + 'px ' +
-          ((e.clientY - r.top - r.height / 2) * 0.4).toFixed(1) + 'px';
-      });
-      btn.addEventListener('pointerleave', function () { btn.style.translate = ''; });
-    });
   }
 
-  /* ── Nav: hides scrolling down, returns scrolling up or on hover;
-        pill slides between links (desktop) ── */
-  if (nav) {
-    var lastY = window.scrollY;
-    onScroll(function () {
-      var y = window.scrollY;
-      if (Math.abs(y - lastY) < 6) return;
-      var hide = y > lastY && y > 160 && !nav.classList.contains('is-open') && !nav.matches(':hover') && !nav.contains(document.activeElement);
-      nav.classList.toggle('is-hidden', hide && !reduce);
-      lastY = y;
-    });
-    nav.addEventListener('focusin', function () { nav.classList.remove('is-hidden'); });
-
-    var links = nav.querySelector('.nav__links');
-    var hovered = null;
-    function placePill(a) {
-      if (!a || getComputedStyle(links).display !== 'flex') { links.classList.remove('has-pill'); return; }
-      var first = !links.classList.contains('has-pill');
-      if (first) links.classList.add('is-instant');
-      links.style.setProperty('--pill-x', a.offsetLeft + 'px');
-      links.style.setProperty('--pill-w', a.offsetWidth + 'px');
-      links.classList.add('has-pill');
-      if (first) { void links.offsetWidth; links.classList.remove('is-instant'); }
-    }
-    function current() { return links.querySelector('a[aria-current="true"]'); }
-    links.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('mouseenter', function () { hovered = a; placePill(a); });
-      a.addEventListener('focus', function () { hovered = a; placePill(a); });
-    });
-    links.addEventListener('mouseleave', function () { hovered = null; placePill(current()); });
-    links.addEventListener('focusout', function (e) { if (!links.contains(e.relatedTarget)) { hovered = null; placePill(current()); } });
-    // follows the section spy in main.js (it toggles aria-current)
-    new MutationObserver(function () { if (!hovered) placePill(current()); })
-      .observe(links, { subtree: true, attributes: true, attributeFilter: ['aria-current'] });
-    document.addEventListener('gf:languagechange', function () { placePill(hovered || current()); });
-    window.addEventListener('resize', function () { placePill(hovered || current()); });
-  }
+  /* ── Stack mosaic: chips ripple one after another when a tile is hovered (CSS reads --ci) ── */
+  document.querySelectorAll('.bento--stack .bcard').forEach(function (card) {
+    card.querySelectorAll('.chip').forEach(function (c, i) { c.style.setProperty('--ci', i); });
+  });
 
   /* ── Trajetória ── */
   var tl = document.querySelector('[data-tl]');

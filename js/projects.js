@@ -11,14 +11,12 @@
      redesign: (optional) true adds the "Redesign" flag on the cover.
      icon:    id of a symbol in the sprite at the top of index.html (i-p-*)
      logo:    (optional) path to a logo image; wins over `icon`. Not used by default.
-     variant: gradient of the tile (a–e, v) — see css/sections.css
    ───────────────────────────────────────────────────────────── */
 window.PROJECTS = [
   {
     id: 'nossoappescolar',
     name: 'Nosso App Escolar',
     icon: 'i-p-book',
-    variant: 'a',
     domain: 'www.nossoappescolar.com.br',
     href: 'https://www.nossoappescolar.com.br/',
     tags: ['frontend'],
@@ -28,7 +26,6 @@ window.PROJECTS = [
     id: 'cizyo',
     name: 'CIZYO',
     icon: 'i-p-people',
-    variant: 'd',
     domain: 'www.cizyo.com.br',
     href: 'https://www.cizyo.com.br/',
     tags: ['fullstack', 'integrations'],
@@ -38,7 +35,6 @@ window.PROJECTS = [
     id: 'escalainteligente',
     name: 'Escala Inteligente',
     icon: 'i-p-clock',
-    variant: 'e',
     domain: 'iOS · Android',
     href: null,
     stores: {
@@ -52,7 +48,6 @@ window.PROJECTS = [
     id: 'vergi',
     name: 'Vergi',
     icon: 'i-p-calendar',
-    variant: 'v',
     redesign: true,
     domain: 'vergi.sistemasneo.com.br',
     href: 'https://vergi.sistemasneo.com.br/',
@@ -63,7 +58,6 @@ window.PROJECTS = [
     id: 'cozinha',
     name: 'Cozinha Inteligente',
     icon: 'i-p-plate',
-    variant: 'c',
     redesign: true,
     domain: 'receitas.sistemasneo.com.br',
     href: 'https://receitas.sistemasneo.com.br/',
@@ -74,7 +68,6 @@ window.PROJECTS = [
     id: 'estaocasando',
     name: 'EstãoCasando.com',
     icon: 'i-p-ring',
-    variant: 'b',
     redesign: true,
     domain: 'www.estaocasando.com',
     href: 'https://www.estaocasando.com/',
@@ -85,7 +78,6 @@ window.PROJECTS = [
     id: 'nazario',
     name: 'Nazario Sistemas',
     icon: 'i-p-code',
-    variant: 'a',
     redesign: true,
     domain: 'www.jnazario.com',
     href: 'https://www.jnazario.com/',
@@ -96,7 +88,6 @@ window.PROJECTS = [
     id: 'powerembedded',
     name: 'Power Embedded',
     icon: 'i-p-chart',
-    variant: 'e',
     domain: 'powerembedded.com.br',
     href: 'https://powerembedded.com.br/',
     tags: ['backend', 'frontend', 'powerbi'],
@@ -106,7 +97,6 @@ window.PROJECTS = [
     id: 'tecnocryo',
     name: 'Tecnocryo',
     icon: 'i-p-snow',
-    variant: 'c',
     domain: 'www.tecnocryo.com.br',
     href: 'https://www.tecnocryo.com.br/',
     tags: ['frontend', 'backend'],
@@ -116,7 +106,6 @@ window.PROJECTS = [
     id: 'financeiro',
     name: 'Sistema Financeiro',
     icon: 'i-p-dollar',
-    variant: 'd',
     domain: 'financeiro.sistemasneo.com.br',
     href: 'https://financeiro.sistemasneo.com.br',
     tags: ['backend', 'frontend', 'integrations'],
@@ -126,7 +115,6 @@ window.PROJECTS = [
     id: 'minhaprimeiraapi',
     name: 'MinhaPrimeiraAPI',
     icon: 'i-p-braces',
-    variant: 'a',
     domain: 'github.com/GabrielFracalossi',
     href: 'https://github.com/GabrielFracalossi/MinhaPrimeiraApi',
     github: true,
@@ -137,7 +125,6 @@ window.PROJECTS = [
     id: 'academicos',
     name: 'Projetos Acadêmicos',
     icon: 'i-p-cap',
-    variant: 'b',
     domain: 'github.com/GabrielFracalossi',
     href: 'https://github.com/GabrielFracalossi',
     github: true,
@@ -185,15 +172,15 @@ window.buildProjectCard = function buildProjectCard(p) {
     : '<svg class="icon icon--stroke project__icon" aria-hidden="true"><use href="#' + p.icon + '"/></svg>';
 
   return (
-    '<article class="project" id="project-' + p.id + '" data-reveal data-glow>' +
-      '<div class="project__thumb project__thumb--' + p.variant + '">' +
+    '<article class="project" id="project-' + p.id + '" data-reveal>' +
+      '<div class="project__thumb">' +
         '<svg class="project__arches" viewBox="0 0 400 500" aria-hidden="true"><use href="#i-arches"/></svg>' +
         '<span class="project__badge">' + mark + '</span>' +
-        '<div class="project__tags">' + tags + '</div>' +
         '<span class="project__domain">' + p.domain + '</span>' +
         (p.redesign ? '<span class="project__flag" data-i18n="tag.redesign"></span>' : '') +
       '</div>' +
       '<div class="project__body">' +
+        '<div class="project__tags">' + tags + '</div>' +
         '<h3 class="project__name" id="project-' + p.id + '-name">' + p.name + '</h3>' +
         '<p class="project__role" data-i18n="projects.' + p.id + '.role"></p>' +
         '<p class="project__desc" data-i18n="projects.' + p.id + '.desc"></p>' +
@@ -214,6 +201,6 @@ window.buildProjectCard = function buildProjectCard(p) {
 
   // Cards enter in staggered columns, never in one identical wave
   grid.querySelectorAll('.project').forEach(function (card, i) {
-    card.style.setProperty('--reveal-delay', (i % 4) * 80 + 'ms');
+    card.style.setProperty('--reveal-delay', (i % 2) * 90 + 'ms');
   });
 })();

@@ -82,7 +82,8 @@ window.I18N.pt = {
   'exp.ja.company': 'Perfil Alumínio do Brasil',
   'exp.ja.b1': 'Apoio ao time de marketing com organização de dados, controle de estoque e planilhas para reuniões.',
   'exp.edu.label': 'Formação',
-  'exp.edu.text': 'Tecnólogo em Análise e Desenvolvimento de Sistemas · Universidade Vila Velha (concluído)',
+  'exp.edu.course': 'Tecnólogo em Análise e Desenvolvimento de Sistemas',
+  'exp.edu.status': 'Concluído',
 
   'nz.title': 'Além do código, uma empresa de software',
   'nz.lead':

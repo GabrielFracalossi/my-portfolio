@@ -79,7 +79,8 @@ window.I18N.en = {
   'exp.ja.company': 'Perfil Alumínio do Brasil',
   'exp.ja.b1': 'Supported the marketing team with data organization, inventory control and spreadsheets for meetings.',
   'exp.edu.label': 'Education',
-  'exp.edu.text': 'Associate Degree in Systems Analysis and Development · Universidade Vila Velha (completed)',
+  'exp.edu.course': 'Associate Degree in Systems Analysis and Development',
+  'exp.edu.status': 'Completed',
 
   'nz.title': 'Beyond code, a software company',
   'nz.lead':
@@ -109,7 +110,7 @@ window.I18N.en = {
   'tag.didactic': 'Educational',
   'tag.academic': 'Academic',
   'tag.redesign': 'Redesign',
-  'exp.now.year': 'Now',
+  'exp.now.year': 'Present',
   'exp.hint': 'Scroll to move through the timeline',
 
   'projects.comingSoon': 'Coming soon',

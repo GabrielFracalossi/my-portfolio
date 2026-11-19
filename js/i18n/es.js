@@ -80,7 +80,8 @@ window.I18N.es = {
   'exp.ja.b1':
     'Apoyo al equipo de marketing con organización de datos, control de inventario y hojas de cálculo para reuniones.',
   'exp.edu.label': 'Formación',
-  'exp.edu.text': 'Tecnólogo en Análisis y Desarrollo de Sistemas · Universidade Vila Velha (concluido)',
+  'exp.edu.course': 'Tecnólogo en Análisis y Desarrollo de Sistemas',
+  'exp.edu.status': 'Concluido',
 
   'nz.title': 'Más allá del código, una empresa de software',
   'nz.lead':
