@@ -116,18 +116,21 @@ const itemList = {
   '@type': 'ItemList',
   name: 'Projetos de Gabriel Fracalossi',
   itemListElement: projects.map(function (p, i) {
-    return {
-      '@type': 'ListItem',
-      position: i + 1,
-      item: {
-        '@type': p.github ? 'SoftwareSourceCode' : 'CreativeWork',
-        name: p.name,
-        url: p.href || undefined, // omit rather than ship "url": null for unpublished projects
-        description: dict['projects.' + p.id + '.desc'] || '',
-        keywords: p.tech.join(', '),
-        creator: { '@id': 'https://gabrielfracalossi.com.br/#person' }
-      }
+    const item = {
+      '@type': p.stores ? 'MobileApplication' : p.github ? 'SoftwareSourceCode' : 'CreativeWork',
+      name: p.name,
+      // omit rather than ship "url": null for unpublished projects
+      url: p.href || (p.stores && p.stores.appStore) || undefined,
+      description: dict['projects.' + p.id + '.desc'] || '',
+      keywords: p.tech.join(', '),
+      creator: { '@id': 'https://gabrielfracalossi.com.br/#person' }
     };
+    if (p.stores) {
+      item.operatingSystem = 'iOS, Android';
+      item.applicationCategory = 'BusinessApplication';
+      item.sameAs = [p.stores.appStore, p.stores.playStore];
+    }
+    return { '@type': 'ListItem', position: i + 1, item: item };
   })
 };
 const jsonldBlock =

@@ -108,6 +108,9 @@ window.I18N.en = {
   'tag.powerbi': 'Power BI',
   'tag.didactic': 'Educational',
   'tag.academic': 'Academic',
+  'tag.redesign': 'Redesign',
+  'exp.now.year': 'Now',
+  'exp.hint': 'Scroll to move through the timeline',
 
   'projects.comingSoon': 'Coming soon',
   'projects.nossoappescolar.role': 'Frontend Developer · Nazario Sistemas',
@@ -115,18 +118,18 @@ window.I18N.en = {
   'projects.cizyo.role': 'Full Stack Developer',
   'projects.cizyo.desc': "Marketplace for professional advice: connects anyone who needs guidance to specialists in any field, through paid 1:1 sessions. Full development of the platform, back and front, with the Pagar.me payment gateway integration.",
   'projects.escalainteligente.role': 'Backend Developer',
-  'projects.escalainteligente.desc': 'Work-shift management app (4x4, 12x36 and other rotations) with built-in AI, which already existed as a Base44 web app. I connected that backend to a new mobile app.',
+  'projects.escalainteligente.desc': 'Work-shift management app (4x4, 12x36 and other rotations) with built-in AI, which already existed as a Base44 web app. I connected that backend to a new mobile app, now live on the App Store and Google Play.',
   'projects.vergi.role': 'Full Stack Developer · Nazario Sistemas',
-  'projects.vergi.desc': "White-label scheduling app, built from scratch at Nazario Sistemas. Each business gets a public page with its own branding, and customers find open slots and book in a few taps. Includes a management dashboard, Stripe subscriptions, e-mail and push reminders, and an interface in three languages.",
+  'projects.vergi.desc': "White-label scheduling app, built from scratch at Nazario Sistemas. Each business gets a public page with its own branding, and customers find open slots and book in a few taps. Includes a management dashboard, Stripe subscriptions, e-mail and push reminders, and an interface in three languages. I also did a complete redesign of the app.",
   'projects.cozinha.role': 'Full Stack Developer · Nazario Sistemas',
   'projects.cozinha.desc':
-    'Mobile app that generates practical recipes with AI, with ingredient tracking, history and favorites, and payments integrated with Stripe. Built from scratch: backend, app, data modeling and architecture.',
+    'Mobile app that generates practical recipes with AI, with ingredient tracking, history and favorites, and payments integrated with Stripe. Built from scratch: backend, app, data modeling and architecture. I also did a complete redesign of the app and its landing page.',
   'projects.estaocasando.role': 'Full Stack Developer · Solo project',
   'projects.estaocasando.desc':
-    'Platform for creating custom wedding websites, with gift registry, guest management, vendor profiles, testimonials and messaging between users. Payments through StarkBank. A solo project, from backend to frontend.',
+    'Platform for creating custom wedding websites, with gift registry, guest management, vendor profiles, testimonials and messaging between users. Payments through StarkBank. A solo project, from backend to frontend. I also did a complete redesign of the platform.',
   'projects.nazario.role': 'Frontend Developer and backend support',
   'projects.nazario.desc':
-    "The company's corporate website, with a modern, responsive layout focused on user experience. I also built backend endpoints for demo requests and lead capture.",
+    "The company's corporate website, with a modern, responsive layout focused on user experience. I also built backend endpoints for demo requests and lead capture. I also did a complete redesign of the site.",
   'projects.powerembedded.role': 'Backend Developer · AzureBrasil.cloud',
   'projects.powerembedded.desc': "Production .NET backend: bug fixes, new features and automations with Azure Functions. I took part in the full refactor to a layered architecture during the .NET 10 migration, cutting critical calls from ~2 minutes to ~15 seconds and deploys from 15 to 9 minutes. I also worked on frontend and mobile demands.",
   'projects.tecnocryo.role': 'Frontend Developer and backend support',

@@ -60,6 +60,9 @@ html { scrollbar-width: thin; scrollbar-color: var(--scroll-thumb) transparent; 
   padding-inline: var(--gutter);
 }
 
+/* Full-bleed band: panels that run almost edge to edge (hero, Nazario, Stack) */
+.bleed { padding-inline: 12px; }
+
 .sr-only {
   position: absolute;
   width: 1px; height: 1px;
@@ -87,14 +90,70 @@ html { scrollbar-width: thin; scrollbar-color: var(--scroll-thumb) transparent; 
 .icon { width: 1.25em; height: 1.25em; flex: none; fill: currentColor; }
 .icon--stroke { fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
 
-/* Scroll reveal — content is visible by default, JS opts in via .js */
+/* ─── MOTION HOOKS (driven by js/effects.js) ──────────────────
+   Content is visible by default; the .js class opts each hook in. */
+
+/* Fade-up with a soft focus pull */
 .js [data-reveal] {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
+  transform: translateY(26px);
+  filter: blur(6px);
+  transition: opacity 900ms var(--ease-out), transform 900ms var(--ease-out), filter 900ms var(--ease-out);
   transition-delay: var(--reveal-delay, 0ms);
 }
-.js [data-reveal].is-visible { opacity: 1; transform: none; }
+.js [data-reveal].is-visible { opacity: 1; transform: none; filter: none; }
+
+/* Headings whose words rise from behind a mask */
+.gf-word { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.08em; margin-bottom: -0.08em; }
+.gf-word > span { display: inline-block; }
+.js [data-split].is-split .gf-word > span {
+  transform: translateY(105%);
+  transition: transform 1000ms var(--ease-out);
+  transition-delay: calc(var(--i) * 55ms);
+}
+.js [data-split].is-split.is-visible .gf-word > span { transform: none; }
+
+/* Statement whose words light up while it crosses the viewport */
+.gf-hw { transition: color 350ms var(--ease-out); }
+.js [data-highlight] .gf-hw { color: color-mix(in srgb, var(--ink) 22%, transparent); }
+.js [data-highlight] .gf-hw.is-lit { color: var(--ink); }
+
+/* Spotlight that follows the pointer inside a surface */
+[data-glow] { position: relative; isolation: isolate; }
+[data-glow]::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(480px circle at var(--mx, 50%) var(--my, 50%), var(--spot), transparent 65%);
+  opacity: 0;
+  transition: opacity 500ms var(--ease-out);
+  pointer-events: none;
+}
+[data-glow]:hover::before { opacity: 1; }
+
+/* Page-wide glow that trails the cursor, behind the content */
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 900px;
+  height: 900px;
+  margin: -450px 0 0 -450px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, var(--glow-page), transparent);
+  opacity: 0;
+  transition: opacity 800ms var(--ease-out);
+  pointer-events: none;
+  will-change: transform;
+}
+.cursor-glow.is-on { opacity: 1; }
+main, .footer { position: relative; z-index: 1; }
+
+/* Magnetic buttons move with the individual translate property, so hover transforms still apply */
+[data-magnetic] { transition: transform var(--dur-base) var(--ease-out), translate 500ms var(--ease-out); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -103,5 +162,6 @@ html { scrollbar-width: thin; scrollbar-color: var(--scroll-thumb) transparent; 
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  .js [data-reveal] { opacity: 1; transform: none; }
+  .js [data-reveal] { opacity: 1; transform: none; filter: none; }
+  .js [data-split].is-split .gf-word > span { transform: none; }
 }

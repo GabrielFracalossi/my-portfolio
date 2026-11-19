@@ -111,6 +111,9 @@ window.I18N.pt = {
   'tag.powerbi': 'Power BI',
   'tag.didactic': 'Didático',
   'tag.academic': 'Acadêmico',
+  'tag.redesign': 'Redesign',
+  'exp.now.year': 'Hoje',
+  'exp.hint': 'Role para percorrer a linha do tempo',
 
   'projects.comingSoon': 'Em breve',
   'projects.nossoappescolar.role': 'Frontend Developer · Nazario Sistemas',
@@ -118,18 +121,18 @@ window.I18N.pt = {
   'projects.cizyo.role': 'Full Stack Developer',
   'projects.cizyo.desc': 'Marketplace de conselhos profissionais: conecta quem precisa de orientação a especialistas de qualquer área, com sessões pagas 1:1. Desenvolvimento completo da plataforma, back e front, com integração do Pagar.me como gateway de pagamento.',
   'projects.escalainteligente.role': 'Backend Developer',
-  'projects.escalainteligente.desc': 'App de gerenciamento de escalas de trabalho (4x4, 12x36 e outras) com IA integrada, que já existia como aplicação web no Base44. Conectei esse backend a um novo app mobile.',
+  'projects.escalainteligente.desc': 'App de gerenciamento de escalas de trabalho (4x4, 12x36 e outras) com IA integrada, que já existia como aplicação web no Base44. Conectei esse backend a um novo app mobile, já publicado na App Store e no Google Play.',
   'projects.vergi.role': 'Full Stack Developer · Nazario Sistemas',
-  'projects.vergi.desc': "App de agendamentos white-label, criado do zero na Nazario Sistemas. Cada empresa ganha uma página pública com a própria marca, e os clientes encontram horários livres e agendam em poucos toques. Inclui painel de gestão, assinatura via Stripe, lembretes por e-mail e push, e interface em três idiomas.",
+  'projects.vergi.desc': "App de agendamentos white-label, criado do zero na Nazario Sistemas. Cada empresa ganha uma página pública com a própria marca, e os clientes encontram horários livres e agendam em poucos toques. Inclui painel de gestão, assinatura via Stripe, lembretes por e-mail e push, e interface em três idiomas. Também fiz o redesign completo do app.",
   'projects.cozinha.role': 'Full Stack Developer · Nazario Sistemas',
   'projects.cozinha.desc':
-    'App mobile que gera receitas práticas com IA, com cadastro de ingredientes, histórico e favoritos e pagamentos integrados ao Stripe. Construído do zero: backend, app, modelagem de dados e arquitetura.',
+    'App mobile que gera receitas práticas com IA, com cadastro de ingredientes, histórico e favoritos e pagamentos integrados ao Stripe. Construído do zero: backend, app, modelagem de dados e arquitetura. Também fiz o redesign completo do app e da landing page.',
   'projects.estaocasando.role': 'Full Stack Developer · Projeto solo',
   'projects.estaocasando.desc':
-    'Plataforma para criar sites de casamento personalizados, com lista de presentes, gestão de convidados, perfil de fornecedores, depoimentos e mensagens entre usuários. Pagamentos via StarkBank. Projeto solo, do backend ao frontend.',
+    'Plataforma para criar sites de casamento personalizados, com lista de presentes, gestão de convidados, perfil de fornecedores, depoimentos e mensagens entre usuários. Pagamentos via StarkBank. Projeto solo, do backend ao frontend. Também fiz o redesign completo da plataforma.',
   'projects.nazario.role': 'Frontend Developer e apoio no backend',
   'projects.nazario.desc':
-    'Site institucional da empresa, com layout moderno, responsivo e foco na experiência do usuário. Também criei endpoints de backend para solicitação de demonstração e captura de leads.',
+    'Site institucional da empresa, com layout moderno, responsivo e foco na experiência do usuário. Também criei endpoints de backend para solicitação de demonstração e captura de leads. Também fiz o redesign completo do site.',
   'projects.powerembedded.role': 'Backend Developer · AzureBrasil.cloud',
   'projects.powerembedded.desc': "Backend .NET em produção: correção de bugs, novas funcionalidades e automações com Azure Functions. Participei da refatoração completa para arquitetura em camadas na migração para .NET 10, que reduziu chamadas críticas de ~2 minutos para ~15 segundos e o deploy de 15 para 9 minutos. Também colaborei em demandas de frontend e mobile.",
   'projects.tecnocryo.role': 'Frontend Developer e apoio no backend',

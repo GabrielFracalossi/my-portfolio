@@ -6,6 +6,9 @@
    Cover of each card = gradient tile + icon badge:
      href:    omit or set null when there is nothing to link yet (renders a
               "coming soon" label instead of a link).
+     stores:  (optional) { appStore, playStore }: store buttons instead of
+              the single link (mobile apps).
+     redesign: (optional) true adds the "Redesign" flag on the cover.
      icon:    id of a symbol in the sprite at the top of index.html (i-p-*)
      logo:    (optional) path to a logo image; wins over `icon`. Not used by default.
      variant: gradient of the tile (a–e, v) — see css/sections.css
@@ -36,8 +39,12 @@ window.PROJECTS = [
     name: 'Escala Inteligente',
     icon: 'i-p-clock',
     variant: 'e',
-    domain: '',
+    domain: 'iOS · Android',
     href: null,
+    stores: {
+      appStore: 'https://apps.apple.com/br/app/escala-inteligente/id6813405918',
+      playStore: 'https://play.google.com/store/apps/details?id=com.jnazario.escalainteligente&hl=pt_BR'
+    },
     tags: ['backend', 'mobile', 'integrations'],
     tech: ['Flutter', 'Base44', 'APIs REST', 'JSON']
   },
@@ -46,6 +53,7 @@ window.PROJECTS = [
     name: 'Vergi',
     icon: 'i-p-calendar',
     variant: 'v',
+    redesign: true,
     domain: 'vergi.sistemasneo.com.br',
     href: 'https://vergi.sistemasneo.com.br/',
     tags: ['fullstack', 'mobile', 'integrations'],
@@ -56,6 +64,7 @@ window.PROJECTS = [
     name: 'Cozinha Inteligente',
     icon: 'i-p-plate',
     variant: 'c',
+    redesign: true,
     domain: 'receitas.sistemasneo.com.br',
     href: 'https://receitas.sistemasneo.com.br/',
     tags: ['fullstack', 'mobile', 'integrations'],
@@ -66,6 +75,7 @@ window.PROJECTS = [
     name: 'EstãoCasando.com',
     icon: 'i-p-ring',
     variant: 'b',
+    redesign: true,
     domain: 'www.estaocasando.com',
     href: 'https://www.estaocasando.com/',
     tags: ['fullstack', 'solo', 'integrations'],
@@ -76,6 +86,7 @@ window.PROJECTS = [
     name: 'Nazario Sistemas',
     icon: 'i-p-code',
     variant: 'a',
+    redesign: true,
     domain: 'www.jnazario.com',
     href: 'https://www.jnazario.com/',
     tags: ['frontend', 'backend'],
@@ -149,12 +160,23 @@ window.buildProjectCard = function buildProjectCard(p) {
     .join('');
   var tech = p.tech.map(function (t) { return '<li>' + t + '</li>'; }).join('');
 
-  var linkHtml = p.href
+  var newTab = '<span class="sr-only" data-i18n="a11y.newTab"></span>';
+  function store(href, icon, label) {
+    return '<a class="store-btn" href="' + href + '" target="_blank" rel="noopener noreferrer">' +
+      '<svg class="icon" aria-hidden="true"><use href="#' + icon + '"/></svg>' + label + newTab + '</a>';
+  }
+
+  var linkHtml = p.stores
+    ? '<div class="project__stores">' +
+        store(p.stores.appStore, 'i-apple', 'App Store') +
+        store(p.stores.playStore, 'i-gplay', 'Google Play') +
+      '</div>'
+    : p.href
     ? '<a class="project__link" href="' + p.href + '" target="_blank" rel="noopener noreferrer" ' +
         'id="project-' + p.id + '-link" aria-labelledby="project-' + p.id + '-name project-' + p.id + '-link">' +
         '<span class="label" data-i18n="' + (p.github ? 'projects.github' : 'projects.visit') + '"></span>' +
         arrow +
-        '<span class="sr-only" data-i18n="a11y.newTab"></span>' +
+        newTab +
       '</a>'
     : '<span class="project__link project__link--soon"><span class="label" data-i18n="projects.comingSoon"></span></span>';
 
@@ -163,12 +185,13 @@ window.buildProjectCard = function buildProjectCard(p) {
     : '<svg class="icon icon--stroke project__icon" aria-hidden="true"><use href="#' + p.icon + '"/></svg>';
 
   return (
-    '<article class="project" id="project-' + p.id + '" data-reveal>' +
+    '<article class="project" id="project-' + p.id + '" data-reveal data-glow>' +
       '<div class="project__thumb project__thumb--' + p.variant + '">' +
         '<svg class="project__arches" viewBox="0 0 400 500" aria-hidden="true"><use href="#i-arches"/></svg>' +
         '<span class="project__badge">' + mark + '</span>' +
         '<div class="project__tags">' + tags + '</div>' +
         '<span class="project__domain">' + p.domain + '</span>' +
+        (p.redesign ? '<span class="project__flag" data-i18n="tag.redesign"></span>' : '') +
       '</div>' +
       '<div class="project__body">' +
         '<h3 class="project__name" id="project-' + p.id + '-name">' + p.name + '</h3>' +
@@ -191,6 +214,6 @@ window.buildProjectCard = function buildProjectCard(p) {
 
   // Cards enter in staggered columns, never in one identical wave
   grid.querySelectorAll('.project').forEach(function (card, i) {
-    card.style.setProperty('--reveal-delay', (i % 3) * 90 + 'ms');
+    card.style.setProperty('--reveal-delay', (i % 4) * 80 + 'ms');
   });
 })();

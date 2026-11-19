@@ -12,14 +12,15 @@
   --fs-base: 1rem;
   --fs-md: 1.125rem;
   --fs-lg: clamp(1.25rem, 1.05rem + 0.7vw, 1.5rem);
-  --fs-xl: clamp(1.75rem, 1.2rem + 1.9vw, 2.75rem);   /* section titles */
-  --fs-2xl: clamp(1.625rem, 1rem + 2.6vw, 3.25rem);    /* about statement */
+  --fs-xl: clamp(2rem, 1.1rem + 3vw, 4.5rem);          /* section titles */
+  --fs-2xl: clamp(1.75rem, 0.9rem + 3.1vw, 4.25rem);   /* about statement */
   --fs-hero: clamp(2.5rem, 1.3rem + 4.2vw, 4.5rem);    /* hero title */
 
   /* Space & layout */
-  --gutter: clamp(1rem, 0.5rem + 2vw, 2rem);
-  --container: 1240px;
-  --stage-max: 1480px;
+  --gutter: clamp(1rem, 0.3rem + 2.8vw, 3.5rem);
+  --container: 1480px;
+  --stage-max: 1880px;  /* hero and full-bleed panels */
+  --nav-max: 1080px;    /* the floating nav stays compact; content runs wider */
   --space-section: clamp(4.5rem, 2.5rem + 7vw, 8.5rem);
   --nav-h: 72px;
   --pad-x: clamp(1rem, 3vw, 2rem);   /* inner padding of stage panels and nav */
@@ -85,6 +86,8 @@
   --shadow-card: 0 28px 56px -28px rgba(0, 20, 90, 0.7);
   --thumb-overlay: linear-gradient(180deg, rgba(3, 6, 15, 0.62) 0%, rgba(3, 6, 15, 0) 34%, rgba(3, 6, 15, 0) 52%, rgba(3, 6, 15, 0.72) 100%);
   --scroll-thumb: rgba(0, 151, 245, 0.45);
+  --spot: rgba(0, 151, 245, 0.16);        /* [data-glow] spotlight under the cursor */
+  --glow-page: rgba(0, 120, 255, 0.13);   /* page-wide glow that trails the cursor */
 }
 
 /* ── LIGHT — cool gray stage, ink navy, cobalt accent ──────── */
@@ -125,4 +128,6 @@
   --shadow-card: 0 28px 56px -30px rgba(20, 35, 90, 0.35);
   --thumb-overlay: linear-gradient(180deg, rgba(11, 16, 32, 0.62) 0%, rgba(11, 16, 32, 0) 34%, rgba(11, 16, 32, 0) 52%, rgba(11, 16, 32, 0.72) 100%);
   --scroll-thumb: rgba(10, 63, 224, 0.4);
+  --spot: rgba(10, 63, 224, 0.08);
+  --glow-page: rgba(10, 63, 224, 0.09);
 }

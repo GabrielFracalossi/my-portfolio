@@ -48,20 +48,24 @@ Projects section (https://gabrielfracalossi.com.br/#projects).
 - [CIZYO](https://www.cizyo.com.br/): marketplace for paid 1:1 advisory
   sessions on any topic. Full stack development, Pagar.me integration,
   automated tests.
-- [Escala Inteligente](https://gabrielfracalossi.com.br/#projects): AI-assisted
+- [Escala Inteligente](https://apps.apple.com/br/app/escala-inteligente/id6813405918): AI-assisted
   work-shift scheduling app (4x4, 12x36...). Connected the existing Base44
-  backend to a new mobile app. Not published yet.
+  backend to a new mobile app, live on the App Store and Google Play
+  (https://play.google.com/store/apps/details?id=com.jnazario.escalainteligente).
 - [Vergi](https://vergi.sistemasneo.com.br/): white-label appointment-scheduling
-  app, built from scratch with his partner at Nazario Sistemas. .NET 10,
+  app, built from scratch at Nazario Sistemas; he also did its complete redesign. .NET 10,
   ASP.NET Core, Entity Framework, PostgreSQL, Flutter Web, Stripe, Azure.
 - [Cozinha Inteligente](https://receitas.sistemasneo.com.br/): mobile app that
   generates recipes with AI. .NET, C#, ASP.NET Core, Entity Framework,
-  PostgreSQL, Flutter, Stripe, OpenAI API.
+  PostgreSQL, Flutter, Stripe, OpenAI API. He also did the complete redesign
+  of the app and its landing page.
 - [EstãoCasando.com](https://www.estaocasando.com/): platform for custom wedding
   websites (gift registry, guest management, vendor profiles). Solo project.
   .NET, C#, ASP.NET Core, Entity Framework, PostgreSQL, StarkBank API.
+  He also did the complete redesign of the platform.
 - [Nazario Sistemas](https://www.jnazario.com/): the company's corporate site
-  (frontend, plus backend endpoints for lead capture).
+  (frontend, plus backend endpoints for lead capture), including its complete
+  redesign.
 - [Power Embedded](https://powerembedded.com.br/): production .NET backend at
   AzureBrasil.cloud (see Experience above).
 - [Tecnocryo](https://www.tecnocryo.com.br/): corporate site for a client,

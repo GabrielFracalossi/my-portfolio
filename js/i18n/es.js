@@ -109,6 +109,9 @@ window.I18N.es = {
   'tag.powerbi': 'Power BI',
   'tag.didactic': 'Didáctico',
   'tag.academic': 'Académico',
+  'tag.redesign': 'Rediseño',
+  'exp.now.year': 'Hoy',
+  'exp.hint': 'Desplázate para recorrer la línea de tiempo',
 
   'projects.comingSoon': 'Próximamente',
   'projects.nossoappescolar.role': 'Frontend Developer · Nazario Sistemas',
@@ -116,18 +119,18 @@ window.I18N.es = {
   'projects.cizyo.role': 'Full Stack Developer',
   'projects.cizyo.desc': 'Marketplace de consejos profesionales: conecta a quien necesita orientación con especialistas de cualquier área, mediante sesiones pagas 1:1. Desarrollo completo de la plataforma, back y front, con la integración de Pagar.me como pasarela de pago.',
   'projects.escalainteligente.role': 'Backend Developer',
-  'projects.escalainteligente.desc': 'App de gestión de escalas de trabajo (4x4, 12x36 y otras) con IA integrada, que ya existía como aplicación web en Base44. Conecté ese backend a una nueva app móvil.',
+  'projects.escalainteligente.desc': 'App de gestión de escalas de trabajo (4x4, 12x36 y otras) con IA integrada, que ya existía como aplicación web en Base44. Conecté ese backend a una nueva app móvil, ya publicada en la App Store y en Google Play.',
   'projects.vergi.role': 'Full Stack Developer · Nazario Sistemas',
-  'projects.vergi.desc': "App de agendamientos white-label, creada desde cero en Nazario Sistemas. Cada empresa tiene una página pública con su propia marca, y los clientes encuentran horarios libres y reservan en pocos toques. Incluye panel de gestión, suscripción con Stripe, recordatorios por e-mail y push, e interfaz en tres idiomas.",
+  'projects.vergi.desc': "App de agendamientos white-label, creada desde cero en Nazario Sistemas. Cada empresa tiene una página pública con su propia marca, y los clientes encuentran horarios libres y reservan en pocos toques. Incluye panel de gestión, suscripción con Stripe, recordatorios por e-mail y push, e interfaz en tres idiomas. También hice el rediseño completo de la app.",
   'projects.cozinha.role': 'Full Stack Developer · Nazario Sistemas',
   'projects.cozinha.desc':
-    'App móvil que genera recetas prácticas con IA, con registro de ingredientes, historial y favoritos, y pagos integrados con Stripe. Construido desde cero: backend, app, modelado de datos y arquitectura.',
+    'App móvil que genera recetas prácticas con IA, con registro de ingredientes, historial y favoritos, y pagos integrados con Stripe. Construido desde cero: backend, app, modelado de datos y arquitectura. También hice el rediseño completo de la app y de la landing page.',
   'projects.estaocasando.role': 'Full Stack Developer · Proyecto solo',
   'projects.estaocasando.desc':
-    'Plataforma para crear sitios de boda personalizados, con lista de regalos, gestión de invitados, perfil de proveedores, testimonios y mensajes entre usuarios. Pagos con StarkBank. Proyecto solo, del backend al frontend.',
+    'Plataforma para crear sitios de boda personalizados, con lista de regalos, gestión de invitados, perfil de proveedores, testimonios y mensajes entre usuarios. Pagos con StarkBank. Proyecto solo, del backend al frontend. También hice el rediseño completo de la plataforma.',
   'projects.nazario.role': 'Frontend Developer y apoyo en backend',
   'projects.nazario.desc':
-    'Sitio institucional de la empresa, con diseño moderno, responsivo y foco en la experiencia del usuario. También creé endpoints de backend para solicitudes de demostración y captación de leads.',
+    'Sitio institucional de la empresa, con diseño moderno, responsivo y foco en la experiencia del usuario. También creé endpoints de backend para solicitudes de demostración y captación de leads. También hice el rediseño completo del sitio.',
   'projects.powerembedded.role': 'Backend Developer · AzureBrasil.cloud',
   'projects.powerembedded.desc': "Backend .NET en producción: corrección de bugs, nuevas funcionalidades y automatizaciones con Azure Functions. Participé en la refactorización completa a arquitectura en capas durante la migración a .NET 10, que redujo las llamadas críticas de ~2 minutos a ~15 segundos y el despliegue de 15 a 9 minutos. También colaboré en demandas de frontend y móvil.",
   'projects.tecnocryo.role': 'Frontend Developer y apoyo en backend',
